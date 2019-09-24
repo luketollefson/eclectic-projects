@@ -1,0 +1,2 @@
+isEvenAdd2 :: Integer -> Integer
+ifEvenAdd2 n = if even n then n+2 else 

@@ -1,0 +1,6 @@
+House #1: is avaliable on Friday for $43.00
+House #1: is rented by Luke on Saturday for $9,842.42
+House #1: is avaliable on Sunday for $482.24
+House #2: is avaliable on Friday for $92.00
+House #2: is rented by Nathan on Saturday for $82,852.40
+House #2: is avaliable on Sunday for $825.24

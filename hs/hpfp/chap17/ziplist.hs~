@@ -1,0 +1,4 @@
+import Control.Applicative
+import Data.Monoid
+
+--instance Monoid a => 

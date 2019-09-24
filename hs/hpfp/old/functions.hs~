@@ -1,0 +1,7 @@
+-- functions.hs
+module Functions where
+
+myNum :: Integer
+myNum = 1
+
+myVal = myNum

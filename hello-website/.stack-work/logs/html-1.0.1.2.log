@@ -1,0 +1,8 @@
+Warning: html.cabal:10:2: Tabs used as indentation at 10:2, 14:2, 15:2
+Configuring html-1.0.1.2...
+Preprocessing library for html-1.0.1.2..
+Building library for html-1.0.1.2..
+[1 of 2] Compiling Text.Html.BlockTable ( Text/Html/BlockTable.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Text/Html/BlockTable.o )
+[2 of 2] Compiling Text.Html        ( Text/Html.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Text/Html.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/html-1.0.1.2-23NOv2EcnHy3biHspV2LAZ
+Registering library for html-1.0.1.2..

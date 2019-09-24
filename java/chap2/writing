@@ -1,0 +1,9 @@
+52
+Ints take up 32 bits of memory, shorts take up 16 bits of memory,
+and longs take up 64 bits of memory. Ints are standard to use
+in most cases, and don't put up much of a fuss. The memory saves of
+shorts is really only noticable if one has a lot of them, more than
+just a few variables. Longs are not used too often, as ints are
+servicable for most things. But if one needs to keep track of say,
+number of views on a video, or the population of continents, longs
+are handy.

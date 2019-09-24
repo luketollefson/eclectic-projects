@@ -1,0 +1,12 @@
+72.
+It a class is not documented at all, the only way a programmer will
+be able to know what the functions do and the purpose of the class
+is by infering by the name of the variables and methods. If there is
+some documentation the code is far easier to reuse because the explanations
+can provide signficant clarity.
+
+73.
+It is very important to follow the naming conventions. It means the
+programmer can follow the code, and nothing too undexpeted will happen.
+If the conventions were not followed the programmers would have no
+idea wether a word is a class or a variable or method.

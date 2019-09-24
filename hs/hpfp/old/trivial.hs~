@@ -1,0 +1,4 @@
+-- trivial.hs
+module Trivial where
+
+data Trivial = Trivial

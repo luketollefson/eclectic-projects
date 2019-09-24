@@ -1,0 +1,28 @@
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true
+CS130: 95
+Letter grade: A
+Current GPA: 3.68
+Successful student as of Spring semester: true

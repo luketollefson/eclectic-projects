@@ -1,0 +1,5 @@
+-- recursion.hs
+module Recursion where
+
+fourFactorial :: Integer
+fourFactorial = 4 * 3 * 2 * 1

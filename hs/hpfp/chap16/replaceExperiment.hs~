@@ -1,0 +1,11 @@
+module ReplaceExperiment where
+
+replaceWithP :: b -> Char
+replaceWithP = const 'p'
+
+lms :: [Maybe [Char]]
+lms = [Just "Ave", Nothing, Just "woohoo"]
+
+replaceWithP' :: [Maybe [Char]] -> Char
+replaceWithP' = replaceWithP
+

@@ -1,0 +1,11 @@
+[1 of 2] Compiling Main             ( /tmp/stack10031/threads-0.5.1.6/Setup.hs, /tmp/stack10031/threads-0.5.1.6/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/Main.o )
+[2 of 2] Compiling StackSetupShim   ( /home/luke/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /tmp/stack10031/threads-0.5.1.6/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/StackSetupShim.o )
+Linking /tmp/stack10031/threads-0.5.1.6/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/setup ...
+Configuring threads-0.5.1.6...
+Preprocessing library for threads-0.5.1.6..
+Building library for threads-0.5.1.6..
+[1 of 3] Compiling Control.Concurrent.Raw ( Control/Concurrent/Raw.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Control/Concurrent/Raw.o )
+[2 of 3] Compiling Control.Concurrent.Thread ( Control/Concurrent/Thread.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Control/Concurrent/Thread.o )
+[3 of 3] Compiling Control.Concurrent.Thread.Group ( Control/Concurrent/Thread/Group.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Control/Concurrent/Thread/Group.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/threads-0.5.1.6-Jgj7ar6lHUZCMU0QPqs4qO
+Registering library for threads-0.5.1.6..

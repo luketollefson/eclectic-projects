@@ -1,0 +1,12 @@
+{-
+1 c
+2 b
+3 a
+4 c
+5 a
+-}
+
+data Person = Person Bool
+
+printPerson :: Person -> IO ()
+printPerson person = putStrLn (show person)

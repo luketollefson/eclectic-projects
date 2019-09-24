@@ -1,0 +1,7 @@
+-- function_type.hs
+module FunctionType where
+
+data Quantum = Yes | No | Both deriving (Eq, Show)
+
+quantSum1 :: Either Quantum Quantum
+quantSum1 = Right Yes

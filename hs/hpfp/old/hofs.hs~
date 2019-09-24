@@ -1,0 +1,1 @@
+data Employee = Coder | Manager | Veep | CEO deriving (Eq, Ord, Show)

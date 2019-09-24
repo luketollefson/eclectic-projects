@@ -1,0 +1,40 @@
+73
+Array have many advantages. They are a way to creating an
+(almost) arbitrarly long list of veriables. Their implementation
+is fairly primative, and are performant. There are a number
+of invoncinces with using arrays. In Java, there are no top
+level functions to operate in entire arrays. In order to do
+a function on an array, one has to use a for loop, this is 
+verbose and difficult to read. You cant even do an easy comparison In comparsion, Haskell's lists
+are far more handy. Another difficulty with using arrays is that that
+they are non resizable, this is done because it means the
+array is more performat, but resizablity is very handy. Another
+difficulty is properly encapsulating arrays. When arrays are passed,
+unlike normal privtives, only the refrence to the array is passed,
+not the array itself. So in order to make safe functions, one has
+to copy the array into another spot first. Similer deal with
+trying to use a getter with arrays.
+
+74
+To sort an array with n elements
+1 Consider m elements as subarray with m = n elemtns
+2 find the index of a largest evalue in the subarray
+3 swap the element with the largest value and the last
+  one in the subarray
+4 consider the new subarray of m = m -1 elements by eliminating he last
+  eleemnt in the privouse subarray
+5 Repeat 2 through 5 until m  = 1
+
+75
+In the perfect world, there would be no runtime exceptions.
+The compiler would be smart enough to catch all potential errors.
+This world isn't 100% possible, espiecially in Java. But with
+functional programming langauges with a strong type system, like
+Haskell. If it compiles, it probably runs, and it probably runs
+correctly.
+
+76
+This would be very useful, say if another user joins your website.
+Or another person joins your team. Or another solution is evaluated.
+Variable length arrays would be very usefull, because it is
+not very often that you are sure of an arrays size before hand.

@@ -1,0 +1,9 @@
+-- eqCaseGaurd.hs
+module EqCaseGaurd where
+
+data PersonInvalid = NameEmpty | AgeTooLow
+
+-- Compiles without Eq
+toString :: PersonInvalid -> String
+toString NameEmpty = "NameEmpty"
+toString AgeTooLow = "AgeTooLow"

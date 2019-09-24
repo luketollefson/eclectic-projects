@@ -1,0 +1,847 @@
+;; (define (make-rat n d) (cons n d))
+;; (define make-rat cons)
+;; (define (make-rat n d)
+;;   (let ((g (gcd n d)))
+;;     (if (< d 0)
+;; 	(cons (- (/ n g)) (- (/ d g)))
+;; 	(cons (/ n g) (/ d g)))))
+(define (make-rat n d)
+  (cons n d))
+
+;; (define (numer x) (car x))
+;; (define numer car)
+(define (numer x)
+  (let ((g (gcd (car x) (cdr x))))
+    (/ (car x) g)))
+
+;; (define (denom x) (cdr x))
+;; (define denom cdr)
+(define (denom x)
+  (let ((g (gcd (car x) (cdr x))))
+    (/ (cdr x) g)))
+
+(define (add-rat x y)
+  (make-rat (+ (* (numer x) (denom y))
+	       (* (numer y) (denom x)))
+	    (* (denom x) (denom y))))
+
+(define (sub-rat x y)
+  (make-rat (- (* (numer x) (denom y))
+	       (* (numer y) (denom x)))
+	    (* (denom x) (denom y))))
+
+(define (mul-rat x y)
+  (make-rat (* (numer x) (numer y))
+	    (* (denom x) (denom y))))
+
+(define (div-rat x y)
+  (make-rat (* (numer x) (denom y))
+	    (* (denom x) (denom y))))
+
+(define (equal-rat? x y)
+  (= (* (numer x) (denom y))
+     (* (numer y) (denom x))))
+
+(define (print-rat x)
+  (display (numer x))
+  (display "/")
+  (display (denom x))
+  (newline))
+
+(define one-half (make-rat 1 2))
+
+(define one-third (make-rat 1 3))
+
+;; exercise 2.2
+(define (make-segment p1 p2)
+  (cons p1 p2))
+
+(define (start-segment segment)
+  (car segment))
+
+(define (end-segment segment)
+  (cdr segment))
+
+(define (make-point x y)
+  (cons x y))
+
+(define (x-point point)
+  (car point))
+
+(define (y-point point)
+  (cdr point))
+
+(define (average a b)
+  (/ (+ a b) 2))
+
+(define (midpoint segment)
+  (make-point (average (x-point (start-segment segment))
+		       (x-point (end-segment segment)))
+	      (average (y-point (start-segment segment))
+		       (y-point (end-segment segment)))))
+
+(define (print-point p)
+  (display "(")
+  (display (x-point p))
+  (display ",")
+  (display (y-point p))
+  (display ")")
+  (newline))
+
+(define seg
+  (make-segment (make-point -3 4)
+		(make-point 2 1)))
+
+(define (make-rect w h)
+  (cons w h))
+
+(define (width rect)
+  (car rect))
+
+(define (height rect)
+  (cdr rect))
+
+(define (make-rect p1 p2)
+  (cons p1 p2))
+
+(define (p1-rect rect)
+  (car rect))
+
+(define (p2-rect rect)
+  (cdr rect))
+
+(define (width rect)
+  (abs (- (x-point (p2-rect rect)) (x-point (p1-rect rect)))))
+
+(define (height rect)
+  (abs (- (y-point (p2-rect rect)) (y-point (p1-rect rect)))))
+
+(define (perimeter rect)
+  (* 2 (+ (width rect) (height rect))))
+
+(define (area rect)
+  (* (width rect) (height rect)))
+
+(define (cons2 x y)
+  (define (dispatch m)
+    (cond ((= m 0) x)
+	  ((= m 1) y)
+	  (else (error "Argument not 0 or 1 -- CONS" m))))
+  dispatch)
+
+(define (car2 z) (z 0))
+
+(define (cdr2 z) (z 1))
+
+(define (cons3 x y)
+  (lambda (m) (m x y)))
+
+(define (car3 z)
+  (z (lambda (p q) p)))
+
+(define (cdr3 z)
+  (z (lambda (p q) q)))
+
+;; these only work for pairs of numbers
+(define (inc n) (+ n 1))
+
+(define (factor n a)
+  (if (= (remainder n a) 0)
+      (inc (factor (/ n a) a))
+      0))
+
+(define (cons4 a b)
+  (lambda (m) (m (* (expt 2 a) (expt 3 b)))))
+
+(define (car4 z)
+  (z (lambda (c) (factor c 2))))
+
+(define (cdr4 z)
+  (z (lambda (c) (factor c 3))))
+
+(define zero
+  (lambda (f)
+    (lambda (x)
+      x)))
+
+(define (add-1 n)
+  (lambda (f)
+    (lambda (x)
+      (f ((n f) x)))))
+
+(define one
+  (lambda (g)
+    (lambda (y)
+      (g (((lambda (f)
+	     (lambda (x)
+	       x))
+	   g)
+	  y)))))
+
+(define one
+  (lambda (f)
+    (lambda (x)
+      (f x))))
+
+(define two
+  (lambda (f)
+    (lambda (x)
+      (f (f x)))))
+
+(define (add-church m n)
+  (lambda (f)
+    (lambda (x)
+      ((m f) ((n f) x)))))
+
+(define two
+  (lambda (h)
+    (lambda (z)
+      (h (((lambda (g)
+	     (lambda (y)
+	       (g (((lambda (f)
+		      (lambda (x)
+			x))
+		    g)
+		   y))))
+	   h)
+	  z)))))
+
+(define (inc x) (+ x 1))
+
+(define (make-interval a b)
+  (cons a b))
+
+(define (lower-bound interval)
+  (car interval))
+
+(define (upper-bound interval)
+  (cdr interval))
+
+(define (add-interval x y)
+  (make-interval (+ (lower-bound x) (lower-bound y))
+		 (+ (upper-bound x) (upper-bound y))))
+
+(define (mul-interval x y)
+  (let ((p1 (* (lower-bound x) (lower-bound y)))
+	(p2 (* (lower-bound x) (upper-bound y)))
+	(p3 (* (upper-bound x) (lower-bound y)))
+	(p4 (* (upper-bound x) (upper-bound y))))
+    (make-interval (min p1 p2 p3 p4)
+		   (max p1 p2 p3 p4))))
+
+(define (div-interval x y)
+  (if (and (> (upper-bound y) 0) (< (lower-bound y) 0))
+      (error "Divison by an interval that contains zero")
+      (mul-interval x
+		    (make-interval (/ 1.0 (upper-bound y))
+				   (/ 1.0 (lower-bound y))))))
+
+(define (negate x)
+  (make-interval (- (upper-bound x))
+		 (- (lower-bound x))))
+
+(define (sub-interval x y)
+  (add-interval x (negate y)))
+
+(define (width x)
+  (/ (- (upper-bound x) (lower-bound x)) 2.0))
+
+(define (make-center-width c w)
+  (make-interval (- c w) (+ c w)))
+
+(define (center i)
+  (/ (+ (lower-bound i) (upper-bound i)) 2))
+
+(define (width i)
+  (/ (- (upper-bound i) (lower-bound i)) 2))
+
+(define (make-center-percent c percent)
+  (let ((tolerance (* c (/ percent 100.0))))
+    (make-interval (- c tolerance)
+		   (+ c tolerance))))
+
+(define (percent i)
+  (* (/ (width i) (center i)) 100.0))
+
+;; exercise 2.13 percent 1 + percent 2
+
+(define (par1 r1 r2)
+  (div-interval (mul-interval r1 r2)
+		(add-interval r1 r2)))
+
+(define (par2 r1 r2)
+  (let ((one (make-interval 1 1)))
+    (div-interval one
+		  (add-interval (div-interval one r1)
+				(div-interval one r2)))))
+
+;; some more interesting data structures!!
+(define (list-ref items n)
+  (if (= n 0)
+      (car items)
+      (list-ref (cdr items) (- n 1))))
+
+(define squares (list 1 4 9 16 25))
+
+;; (list-ref squares 3)
+
+(define (length items)
+  (if (null? items)
+      0
+      (+ 1 (length (cdr items)))))
+
+(define odds (list 1 3 5 7))
+
+;; (length odds)
+
+(define (length items)
+  (define (length-iter a count)
+    (if (null? a)
+	count
+	(length-iter (cdr a) (+ 1 count))))
+  (length-iter items 0))
+
+(define (append list1 list2)
+  (if (null? list1)
+      list2
+      (cons (car list1) (append (cdr list1) list2))))
+
+(define (last-pair list)
+  (if (null? (cdr list))
+      (car list)
+      (last-pair (cdr list))))
+
+(define (reverse l)
+  (if (null? l)
+      l
+      (append (reverse (cdr l)) (list (car l)))))
+
+;; exercise 2.19
+(define us-coins (list 50 25 10 5 1))
+
+(define uk-coins (list 100 50 20 10 5 2 1 0.5))
+
+(define (cc amount coin-values)
+  (cond ((= amount 0) 1)
+	((or (< amount 0) (no-more? coin-values)) 0)
+	(else
+	 (+ (cc amount
+		(except-first-denomination coin-values))
+	    (cc (- amount
+		   (first-denomination coin-values))
+		coin-values)))))
+
+(define (first-denomination coins)
+  (car coins))
+
+(define (except-first-denomination coins)
+  (cdr coins))
+
+(define (no-more? coins)
+  (null? coins))
+
+;; exercise 2.20
+;; THIS DOES NOT WORK
+;; A LIST IS PASSED IN THE ELSE WHEN IT EXPECTS MANY ARGUEMNTS
+(define (same-parity x  s)
+  (cond ((null? s) s)
+	((even? (+ x (car s)))
+	 (cons x (same-parity (car s) (cdr s))))
+	(else (same-parity x (cdr s)))))
+
+(define (same-parity x . s)
+  (define (iter items answer)
+    (cond ((null? items) answer)
+	  ((even? (+ x (car items)))
+	   (iter (cdr items) (cons (car items) answer)))
+	  (else (iter (cdr items) answer))))
+  (reverse (iter s (list x))))
+
+(define (scale-list items factor)
+  (if (null? items)
+      '()
+      (cons (* (car items) factor)
+	    (scale-list (cdr items) factor))))
+
+;; (define (map proc items)		
+;;   (if (null? items)
+;;       nil
+;;       (cons (proc (car items))
+;; 	    (map proc (cdr items)))))
+
+(define (scale-list items factor)
+  (map (lambda (x) (* x factor))
+       items))
+
+(define (square-list items)
+  (if (null? items)
+      '()
+      (cons (* (car items) (car items)) (square-list (cdr items)))))
+
+(define (square x) (* x x))
+
+(define (square-list items)
+  (map square items))
+
+(define nil '())
+
+;; ohh poor louis
+(define (square-list items)
+  (define (iter things answer)
+    (if (null? things)
+	answer
+	(iter (cdr things)
+	      (cons (square (car things))
+		    answer))))
+  (iter items nil))
+
+(define (square-list items)
+  (define (iter things answer)
+    (if (null? things)
+	answer
+	(iter (cdr things)
+	      (cons answer
+		    (square (car things))))))
+  (iter items nil))
+
+(define (for-each f items)
+  (cond ((null? items) #t)
+	(else (f (car items))
+	      (for-each f (cdr items)))))
+
+(define x (cons (list 1 2) (list 3 4)))
+
+(define (count-leaves x)
+  (cond ((null? x) 0)
+	((not (pair? x)) 1)
+	(else (+ (count-leaves (car x))
+		 (count-leaves (cdr x))))))
+
+;; (define (deep-reverse items)
+;;   (cond ((null? items) nil)
+;; 	((pair? (car items)) (deep-reverse (car items)))
+;; 	(else (append (deep-reverse (cdr items)) (car items))))))
+
+;; (define (deep-reverse items)
+;;   (cond ((null? items) nil)
+;; 	((not (pair? 
+;; 	((pair? (car items)) (append (deep-reverse (cdr items))
+;; 				     (deep-reverse (car items))))
+;; 	(else (cons (deep-reverse (cdr items)) (list (car items)))))))))
+
+(define x (list (list 1 2) (list 3 4)))
+
+(define (deep-reverse items)
+  (if (null? items)
+      nil
+      (append (deep-reverse (cdr items))
+	      (deep-reverse (car items)))))
+
+(define (deep-reverse items)
+  (cond ((null? items) nil)
+	((not (pair? (car items)))
+	 (append (deep-reverse (cdr items))
+		 (list (car items))))
+	(else
+	 (append (deep-reverse (cdr items))
+		 (list (deep-reverse (car items)))))))
+
+(define (fringe items)
+  (cond ((null? items) nil)
+	((not (pair? (car items)))
+	 (cons (car items) (fringe (cdr items))))
+	(else
+	 (append (fringe (car items)) (fringe (cdr items))))))
+
+;; binary mobile
+(define (make-mobile left right)
+  (list left right))
+
+(define (make-branch length structure)
+  (list length structure))
+
+(define (make-mobile left right)
+  (cons left right))
+
+(define (make-branch length structure)
+  (cons length structure))
+
+(define fun-mobile
+  (make-mobile (make-branch -10 4)
+	       (make-branch 4 (make-mobile (make-branch -1 3)
+					   (make-branch 3 9)))))
+
+(define (left-branch mobile)
+  (car mobile))
+
+(define (right-branch mobile)
+  (cdr mobile))
+;;  (cadr mobile))
+
+(define (branch-length branch)
+  (car branch))
+
+(define (branch-structure branch)
+  (cdr branch))
+;;  (cadr branch))
+
+(define (total-weight mobile)
+  (define (branch-weight branch)
+    (cond ((not (pair? (branch-structure branch)))
+	   (branch-structure branch))
+	  (else (total-weight (branch-structure branch)))))
+  (+ (branch-weight (left-branch mobile))
+     (branch-weight (right-branch mobile))))
+
+;; bad, doesn't test sub-branches
+(define (balanced? mobile)
+  (define (branch-torque mobile)
+    (cond ((not (pair? (branch-structure branch)))
+	   (* branch-length (branch-structure branch)))
+	  (else (* branch-length (total-weight (branch-structure))))))
+  (and (= (branch-torque (left-branch mobile))
+	  (branch-torque (right-branch mobile)))))
+
+(define (balanced? mobile)
+  (define (branch-weight branch)
+    (cond ((not (pair? (branch-structure branch)))
+	   (branch-structure branch))
+	  (else (total-weight (branch-structure branch)))))
+  (define (branch-balanced? branch)
+    (cond ((not (pair? (branch-structure branch)))
+	   #t)
+	  (else (balanced? (branch-structure branch)))))
+  (and (= (- (* (branch-length (left-branch mobile))
+		(branch-weight (left-branch mobile))))
+	  (* (branch-length (right-branch mobile))
+	     (branch-weight (right-branch mobile))))
+       (branch-balanced? (left-branch mobile))
+       (branch-balanced? (right-branch mobile))))
+
+(define bal-mobile
+  (make-mobile (make-branch -5 10)
+	       (make-branch 25 2)))
+
+(define (scale-tree tree factor)
+  (cond ((null? tree) nil)
+	((not (pair? tree)) (* tree factor))
+	(else (cons (scale-tree (car tree) factor)
+		    (scale-tree (cdr tree) factor)))))
+
+(define x (list 1 (list 2 (list 3 4) 5) (list 6 7)))
+
+(define (scale-tree tree factor)
+  (map (lambda (sub-tree)
+	 (if (pair? sub-tree)
+	     (scale-tree sub-tree factor)
+	     (* sub-tree factor)))
+       tree))
+
+(define x
+  (list 1
+	(list 2 (list 3 4) 5)
+	(list 6 7)))
+
+(define (square-tree tree)
+  (cond ((null? tree) nil)
+	((not (pair? tree)) (square tree))
+	(else (cons (square-tree (car tree))
+		    (square-tree (cdr tree))))))
+
+(define (square-tree tree)
+  (map (lambda (sub-tree)
+	 (if (pair? sub-tree)
+	     (square-tree sub-tree)
+	     (square sub-tree)))
+       tree))
+
+(define (tree-map f tree)
+  (map (lambda (sub-tree)
+	 (if (pair? sub-tree)
+	     (tree-map f sub-tree)
+	     (f sub-tree)))
+       tree))
+
+(define (square-tree tree) (tree-map square tree))
+
+(define (subsets s)
+  (if (null? s)
+      (list nil)
+      (let ((rest (subsets (cdr s))))
+	(append rest (map (lambda (l) (cons (car s) l)) rest)))))
+
+(define (sum-odd-squares tree)
+  (cond ((null? tree) 0)
+	((not (pair? tree))
+	 (if (odd? tree) (square tree) 0))
+	(else (+ (sum-odd-squares (car tree))
+		 (sum-odd-squares (cdr tree))))))
+
+(define (even-fibs n)
+  (define (next k)
+    (if (> k n)
+	nil
+	(let ((f (fib k)))
+	  (if (even? f)
+	      (cons f (next (+ k 1)))
+	      (next (+ k 1))))))
+  (next 0))
+
+(define (filter predicate sequence)
+  (cond ((null? sequence) nil)
+	((predicate (car sequence))
+	 (cons (car sequence)
+	       (filter predicate (cdr sequence))))
+	(else (filter predicate (cdr sequence)))))
+				 
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+	  (accumulate op initial (cdr sequence)))))
+
+(define (enumerate-interval low high)
+  (if (> low high)
+      nil
+      (cons low (enumerate-interval (+ low 1) high))))
+
+(define (enumerate-tree tree)
+  (cond ((null? tree) nil)
+	((not (pair? tree)) (list tree))
+	(else (append (enumerate-tree (car tree))
+		      (enumerate-tree (cdr tree))))))
+	 
+(define (sum-odd-squares tree)
+  (accumulate +
+	      0
+	      (map square
+		   (filter odd?
+			   (enumerate-tree tree)))))
+
+(define (even-fibs n)
+  (acumulate cons
+	     nil
+	     (filter even?
+		     (map fib
+			  (enumerate-interval 0 n)))))
+
+(define (list-fib-squares n)
+  (accumulate cons
+	      nil
+	      (map square
+		   (map fib
+			(enumerate-interval 0 n)))))
+
+(define (product-of-squares-of-odd-elements sequence)
+  (accumulate *
+	      1
+	      (map square
+		   (filter odd? sequence))))
+	    
+(define (map2 p sequence)
+  (accumulate (lambda (x y) (cons (p x) y)) nil sequence))
+
+(define (append2 seq1 seq2)
+  (accumulate cons seq2 seq1))
+
+(define (length2 sequence)
+  (accumulate (lambda (x y) (+ 1 y)) 0 sequence))
+
+(define (horner-eval x coefficient-sequence)
+  (accumulate (lambda (this-coeff higher-terms)
+		(+ this-coeff (* x higher-terms)))
+	      0
+	      coefficient-sequence))
+
+(define (count-leaves t)
+  (accumulate + 0 (map (lambda (x) 1) (enumerate-tree t))))
+
+(define (accumulate-n op init seqs)
+  (if (null? (car seqs))
+      nil
+      (cons (accumulate op init (map car seqs))
+	    (accumulate-n op init (map cdr seqs)))))
+
+(define fun-stuff
+  (list (list 1 2 3) (list 4 5 6) (list 7 8 9) (list 10 11 12)))
+
+(define matrix
+  (list (list 1 2 3 4) (list 4 5 6 6) (list 6 7 8 9)))
+
+(define vector
+  (list 9 8 7 5))
+
+(define (dot-product v w)
+  (accumulate + 0 (map * v w)))
+
+(define (matrix-*-vector m v)
+  (map (lambda (w) (dot-product v w)) m))
+
+(define (transpose mat)
+  (accumulate-n cons nil mat))
+
+(define (matrix-*-matrix m n)
+  (let ((cols (transpose n)))
+    (map (lambda (row) (matrix-*-vector cols row)) m)))
+
+(define (fold-right op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+	  (accumulate op initial (cdr sequence)))))
+
+(define (fold-left op initial sequence)
+  (define (iter result rest)
+    (if (null? rest)
+	result
+	(iter (op result (car rest))
+	      (cdr rest))))
+  (iter initial sequence))
+
+(define (reverse sequence)
+  (fold-right (lambda (x y) (append y (list x))) nil sequence))
+
+(define (reverse sequence)
+  (fold-left (lambda (x y) (cons y x)) nil sequence))
+
+(define (flatmap proc seq)
+  (accumulate append nil (map proc seq)))
+
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
+(define (divides? a b)
+  (= (remainder b a) 0))
+
+(define (next n)
+  (cond ((= n 2) 3)
+	(else (+ n 2))))
+
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+	((divides? test-divisor n) test-divisor)
+	(else (find-divisor n (next test-divisor)))))
+
+(define (prime? n)
+  (cond ((= n 1) #f)
+	(else (= n (smallest-divisor n)))))
+
+(define (prime-sum? pair)
+  (prime? (+ (car pair) (cadr pair))))
+
+(define (make-pair-sum pair)
+  (list (car pair) (cadr pair) (+ (car pair) (cadr pair))))
+
+(define (prime-sum-pairs n)
+  (map make-pair-sum
+       (filter prime-sum?
+	       (flatmap
+		(lambda (i)
+		  (map (lambda (j) (list i j))
+		       (enumerate-interval 1 (- i 1))))
+		(enumerate-interval 1 n)))))
+
+(define (permutations s)
+  (if (null? s)           ; empty set?
+      (list nil)          ; sequence containing empty set
+      (flatmap (lambda (x)
+		 (map (lambda (p) (cons x p))
+		      (permuations (remove x s))))
+	       s)))
+
+(define (remove item sequence)
+  (filter (lambda (x) (not (= x item)))
+	  sequence))
+
+(define (unique-pairs n)
+  (flatmap
+   (lambda (i)
+     (map (lambda (j) (list i j))
+	  (enumerate-interval 1 (- i 1))))
+   (enumerate-interval 1 n)))
+
+(define (prime-sum-pairs n)
+  (map make-pair-sum (filter prime-sum? (unique-pairs n))))
+
+(define (unique-triples n)
+  (flatmap
+   (lambda (i)
+     (map (lambda (p) (cons i p)) (unique-pairs (- i 1))))
+   (enumerate-interval 3 n)))
+
+(define (sum numbers)
+  (fold-left + 0 numbers))
+
+(define (three-number-sum n s)
+  (filter (lambda (triple) (= (sum triple) s))
+	  (unique-triples n)))
+
+(define (queens board-size)
+  (define (queen-cols k)
+    (if (= k 0)
+	(list empty-board)
+	(filter
+	 (lambda (positions) (safe? k positions))
+	 (flatmap
+	  (lambda (rest-of-queens)
+	    (map (lambda (new-row)
+		   (adjoin-position new-row k rest-of-queens))
+		 (enumerate-interval 1 board-size)))
+	  (queen-cols (- k 1))))))
+  (queen-cols board-size))
+
+;; (define empty-board (list 0 0))
+
+;; (define (safe? k positions)
+;;   (define (diag1 k positions)
+;;     (if (null? positions)
+;;         #t
+;;         (and (not (= k (+ (car positions) 1)))
+;;              (diag1 (- k 1) (cdr positions)))))
+;;   (define (diag2 k positions)
+;;     (if (null? positions)
+;;         #t
+;;         (and (not (= k (- (car positions) 1)))
+;;              (diag2 (+ k 1) (cdr positions))))) 
+;;   (define (horizontal k positions)
+;;     (null? (filter (lambda (x) (not (= x k)))
+;;                    positions)))
+;;   (and (diag1 k positions)
+;;        (diag2 k positions)
+;;        (horizontal k positions)))
+
+;; (define (adjoin-position new-row k rest-of-queens)
+;;   (cons new-row rest-of-queens))
+
+
+(define (make-position row col)
+  (cons row col))
+
+(define (position-row position)
+  (car position))
+
+(define (position-col position)
+  (cdr position))
+
+(define empty-board null)
+
+(define (adjoin-position row col positions)
+  (append positions (list (make-position row col))))
+
+(define (safe? col positions)
+   (let ((kth-queen (list-ref positions (- col 1)))
+         (other-queens (filter (lambda (q)
+                                 (not (= col (position-col q))))
+                               positions)))
+   (define (attacks? q1 q2)
+     (or (= (position-row q1) (position-row q2))
+         (= (abs (- (position-row q1) (position-row q2)))
+            (abs (- (position-col q1) (position-col q2))))))
+
+   (define (iter q board)
+     (or (null? board)
+         (and (not (attacks? q (car board)))
+              (iter q (cdr board)))))
+   (iter kth-queen other-queens)))
+
+

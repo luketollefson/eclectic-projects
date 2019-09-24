@@ -1,0 +1,4 @@
+-- hutton.hs
+module Hutton where
+
+data Expr = Lit Integer | Add Expr Expr

@@ -1,0 +1,4 @@
+-- frac.hs
+module Frac where
+
+divideThenAdd x y = (x / y) + 1

@@ -1,0 +1,116 @@
+#include <stdio.h>
+
+#define MAXNEST	100	
+#define	NESCSEQ	0	
+#define ESCSEQ	1	
+#define OUT	0	
+#define COMMENT	1	
+#define PARENTH	2	
+#define BRACE	3	
+#define BRACKET	4	
+#define SINQUOT	5	
+#define DOUQUOT	6		
+
+
+void print_error(int line, int error);
+
+
+int main()
+{
+	int c, c2, esc, line, stack[MAXNEST], spos;
+
+	line = 1;
+	spos = 0;
+	stack[spos] = OUT;
+	while ((c = getchar()) != EOF) {
+		if (esc == ESCSEQ) {
+			esc = NESCSEQ;
+		} else if (c == '\\') {
+			esc = ESCSEQ;
+		} else if (c == '\'') {
+			if (stack[spos] == SINQUOT) {
+				--spos;
+			} else if (stack[spos] != DOUQUOT) {
+				++spos;
+				stack[spos] = SINQUOT;
+			}
+		} else if (c == '"') {
+			if (stack[spos] == DOUQUOT) {
+				--spos;
+			} else if (stack[spos] != SINQUOT) {
+				++spos;
+				stack[spos] = SINQUOT;
+			}
+		} else if (c == '(') {
+			if (stack[spos] != SINQUOT && stack[spos] != DOUQUOT) {
+				++spos;
+				stack[spos] = PARENTH;
+			}
+		} else if (c == ')') {
+			if (stack[spos] == SINQUOT || stack[spos] == DOUQUOT) {
+				;
+			} else if (stack[spos] == PARENTH) {
+				--spos;
+			} else {
+				print_error(line, stack[spos]);
+			}
+		} else if (c == '{') {
+			if (stack[spos] != SINQUOT && stack[spos] != DOUQUOT) {
+				++spos;
+				stack[spos] = BRACE;
+			}
+		} else if (c == '}') {
+			if (stack[spos] == SINQUOT || stack[spos] == DOUQUOT) {
+				;
+			} else if (stack[spos] == BRACE) {
+				--spos;
+			} else {
+				print_error(line, stack[spos]);
+			}
+		} else if (c == '[') {
+			if (stack[spos] != SINQUOT && stack[spos] != DOUQUOT) {
+				++spos;
+				stack[spos] = BRACKET;
+			}
+		} else if (c == ']') {
+			if (stack[spos] == SINQUOT || stack[spos] == DOUQUOT) {
+				;
+			} else if (stack[spos] == BRACKET) {
+				--spos;
+			} else {
+				print_error(line, stack[spos]);
+			}
+		}
+		printf("%d:", spos);
+		for (int i = 0; i <= spos; ++i)
+			printf(" %d", stack[i]);
+		putchar('\n');
+
+		
+		if (c == '\n')
+			++line;
+	}
+
+	return 0;
+}
+
+
+
+
+void print_error(int line, int error)
+{
+	if (error == OUT)
+		;
+	else if (error == COMMENT)
+		;
+	else if (error == PARENTH)
+		printf("Error:l%d unbalanced parentheses\n", line);
+	else if (error == BRACE)
+		printf("Error:l%d unbalanced braces\n", line);
+	else if (error == BRACKET)
+		printf("Error:l%d unbalanced brackets\n", line);
+	else if (error == SINQUOT)
+		printf("Error:l%d unbalanced single quotes\n", line);
+	else if (error == DOUQUOT)
+		printf("Error:l%d unbalanced double quotes\n", line);
+}

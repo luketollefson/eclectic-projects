@@ -1,0 +1,6 @@
+-- morse.hs
+
+stringToMorse :: String -> Maybe [Morse]
+stringToMorse s = sequence $ fmap charToMorse s
+
+-- what we want to do

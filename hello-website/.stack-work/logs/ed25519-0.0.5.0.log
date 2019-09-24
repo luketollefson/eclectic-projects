@@ -1,0 +1,6 @@
+Configuring ed25519-0.0.5.0...
+Preprocessing library for ed25519-0.0.5.0..
+Building library for ed25519-0.0.5.0..
+[1 of 1] Compiling Crypto.Sign.Ed25519 ( src/Crypto/Sign/Ed25519.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Crypto/Sign/Ed25519.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/ed25519-0.0.5.0-JRZm9qkjuKdJzhMNs9MSTR
+Registering library for ed25519-0.0.5.0..

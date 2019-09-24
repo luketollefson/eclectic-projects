@@ -1,0 +1,83 @@
+Given:
+	type Expr
+	eval function eval :: Expr -> Maybe Int
+	type Stack = [Maybe Int]
+
+Solve:
+	type Code that represents code for VM
+	comp :: Expr -> Code [Compiler]
+	comp' :: Expr -> Code -> Code [Compier]
+	exec :: Code -> Stack -> Stack [VM]
+
+Correctness equations
+	exec (comp e) s = eval e : s
+	exec (comp' e c) s = exec c (eval e : s)
+
+Finding comp' (Val n) base case
+	exec (comp' (Val n) c) s
+=		{ specification for comp' }
+	exec c (eval (Val n) : s)
+=		{ applying eval }
+	exec c (Just n : s)
+	-- Invoking new construct PUSH
+	-- PUSH :: Maybe Int -> Code -> Code
+	-- exec (PUSH n c) s = exec c (Just n : s)
+=		{ unappling exec }
+	exec (PUSH (Just n) c) s
+
+Finding comp' (Add x y) inductive case
+	exec (comp' (Add x y) c) s
+=		{ specification for comp' }
+	exec c (eval (Add x y) : s)
+=		{ applying eval }
+	exec c ((+) <$> eval x <*> eval y : s)
+	-- Need to solve
+	-- exec c' (m:n:s) = exec c (((+)<$>n<*>m):s)
+	-- Invoking new construct ADD
+	-- ADD :: Code -> Code
+	-- exec (ADD c) (m:n:s) = exec c (((+)<$>n<*>m):s)
+=		{ unappling exec }
+	exec (ADD c) (eval y : eval x : s)
+=		{ induction hypothesis for y }
+	exec (comp' y (ADD c)) (eval x : s)
+=		{ induction hypothesis for x }
+	exec (comp' x (comp' y (ADD C))) s
+
+Finding comp' Throw base case
+	exec (comp' Throw c) s
+=		{ specification for comp' }
+	exec c (eval Throw : s)
+=		{ applying eval }
+	exec c (Nothing : s)
+	-- Invoking new contruct NOTHING
+	-- NOTHING :: Code -> Code
+	-- exec (NOTHING c) s = exec c (Nothing : s)
+=		{ unapplying exec }
+	exec (NOTHING c) s
+
+Finding comp' (Catch x h) case
+	exec (comp' (Catch x h) c) s
+=		{ specification for comp' }
+	exec c (eval (Catch x h) : s)
+	-- import Control.Applicative
+=		{ applying eval }
+	exec c (eval x <|> eval h : s)
+	-- need to find
+	-- exec c' (m:n:s) = exec c ((n<|>m):s)
+	-- Invoking new contruct CATCH :: Code -> Code
+	-- exec (CATCH c) (m:n:s) = exec c ((n<|>m):s)
+=		{ unappliyng exec }
+	exec (CATCH c) (eval h : eval x : s)
+=		{ inductive hypothesis on h }
+	exec (comp' h (CATCH c)) (eval x : s)
+=		{ inductive hypothesis on x }
+	exec (comp' x (comp' h (CATCH c))) s
+
+Finding comp
+	exec (comp e) s
+=		{ specification of comp }
+	eval e : s
+=		{ define exec HALT s = s }
+	exec HALT (eval e : s)
+=		{ specification of comp' }
+	exec (comp' e HALT) s

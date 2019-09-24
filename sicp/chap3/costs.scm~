@@ -1,0 +1,3 @@
+(define (make-decrementer balance)
+  (lambda (amount)
+    (- balance amount)))

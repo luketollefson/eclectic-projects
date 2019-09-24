@@ -1,0 +1,28 @@
+56
+Inheritance would allow another programmer to extend existing
+code in a modular way. If thier collugue had designed a class
+which was well tested and documented (and therefore reusuable),
+then the other programrammer could confidently inherit from
+that class, and extend the functinality of the program. The
+availiablity of inheritance also allows programmers to abtract
+common patterns several layers deep. The abstraction allows 
+programmers to use polymorphism and create code that operates
+on a varity of objects that are derived from some higher class.
+
+57
+Dependency hell is the program you get (or diamond dependency)
+		
+		A
+	  /	  \
+	B		C
+	  \   /
+		D
+
+In this model, B and C inhit from A, and D inherits form B and C.
+Lets say all classes start at version 1.0. Now, if A updates to 2.0, can
+we nessarily immidaitly implement it? No, it could break B or C, and if
+it doesn't, it could break D. Lets say it breaks B, so we update B to 2.0
+to work with A, unfortuantly we cant update anyting still, D would still
+be broken under our model. So then we have to go and fix D, and finally
+we can update all of the classes. Also, if B and C have the same method,
+which one does D inherit?

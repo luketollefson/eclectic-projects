@@ -1,0 +1,4 @@
+dumfunc :: a -> String
+dumfunc (a :: Int) = if a == 4 then "Four" else "Not Four"
+dumfunc (a :: String) = if a == "hi" then "hello" else "what?"
+dumfunc _ = "dip"

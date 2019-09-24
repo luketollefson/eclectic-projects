@@ -1,0 +1,12 @@
+(define (square x) (* x x))
+
+(define (even? n)
+  (cond ((= (remainder n 2) 0) #t)
+	(else #f)))
+
+(define (pow base expt)
+  (define (pow-iter a b n)
+    (cond ((= n 0) a)
+	  ((even? n) (pow-iter a (square b) (/ n 2)))
+	  (else (pow-iter (* a b) b (- n 1)))))
+  (pow-iter 1 base expt))

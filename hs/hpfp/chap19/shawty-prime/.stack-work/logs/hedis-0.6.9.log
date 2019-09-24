@@ -1,0 +1,49 @@
+Configuring hedis-0.6.9...
+Building hedis-0.6.9...
+Preprocessing library hedis-0.6.9...
+
+src/Database/Redis/Types.hs:1:33: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+[1 of 9] Compiling Database.Redis.ProtocolPipelining ( src/Database/Redis/ProtocolPipelining.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/ProtocolPipelining.o )
+[2 of 9] Compiling Database.Redis.Protocol ( src/Database/Redis/Protocol.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/Protocol.o )
+
+src/Database/Redis/Protocol.hs:6:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[3 of 9] Compiling Database.Redis.Types ( src/Database/Redis/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/Types.o )
+
+src/Database/Redis/Types.hs:6:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[4 of 9] Compiling Database.Redis.Core ( src/Database/Redis/Core.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/Core.o )
+
+src/Database/Redis/Core.hs:14:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[5 of 9] Compiling Database.Redis.ManualCommands ( src/Database/Redis/ManualCommands.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/ManualCommands.o )
+[6 of 9] Compiling Database.Redis.PubSub ( src/Database/Redis/PubSub.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/PubSub.o )
+
+src/Database/Redis/PubSub.hs:12:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+src/Database/Redis/PubSub.hs:16:1: Warning:
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()
+[7 of 9] Compiling Database.Redis.Transactions ( src/Database/Redis/Transactions.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/Transactions.o )
+
+src/Database/Redis/Transactions.hs:9:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[8 of 9] Compiling Database.Redis.Commands ( src/Database/Redis/Commands.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis/Commands.o )
+[9 of 9] Compiling Database.Redis   ( src/Database/Redis.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.4.0/build/Database/Redis.o )
+In-place registering hedis-0.6.9...
+Installing library in
+/home/luke/.stack/snapshots/x86_64-linux/lts-3.7/7.10.2/lib/x86_64-linux-ghc-7.10.2/hedis-0.6.9-9UOVjini80m4rzTqW1q2tr
+Registering hedis-0.6.9...

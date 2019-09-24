@@ -1,0 +1,7 @@
+-- chap7code.hs
+module Chap7Code where
+
+tensDigit :: Integral a => a -> a
+tensDigit x = d
+  where xlast = x `div` 10
+        d     = xLast `mod` 10

@@ -1,0 +1,5 @@
+-- chap10ex.hs
+module Chap10Ex where
+
+stops  = "pbtdkg"
+vowels = "aeiou"

@@ -1,0 +1,88 @@
+/*	Course exercise
+	Luke
+*/
+
+public class CourseClient
+{
+	public static void main(String[] args)
+	{
+		Course course = new Course("Underwater Basket Weaving", 'D');
+		System.out.println(course);
+		course.setLetterGrade('B');
+		System.out.println(course);
+		course.setCourse("Physics");
+		System.out.println(course);
+		System.out.println(course.getCourse() + course.getLetterGrade());
+
+		Course course2 = new Course("Physics", 'B');
+		System.out.println(course2.equals(course));
+
+		Course course3 = new Course();
+		System.out.println(course3);
+	}
+}
+
+class Course
+{
+	private String course;
+	private char letterGrade;
+
+	public Course()
+	{
+		setCourse("unknown course");
+	}
+
+	public Course(String course, char letterGrade)
+	{
+		setCourse(course);
+		setLetterGrade(letterGrade);
+	}
+
+	public String getCourse()
+	{
+		return course;
+	}
+
+	public char getLetterGrade()
+	{
+		return letterGrade;
+	}
+
+	public void setCourse(String course)
+	{
+		this.course = course;
+	}
+
+	public void setLetterGrade(char letterGrade)
+	{
+		switch (letterGrade)
+		{
+			case 'A': case 'B': case 'C':
+			case 'D': case 'F':
+				this.letterGrade = letterGrade;
+				break;
+			default:
+				System.err.println("Invalid letterGrade");
+		}
+	}
+
+	public String toString()
+	{
+		return "Course: " + course + "; Grade: " + letterGrade;
+	}
+
+	public boolean equals(Object o)
+	{
+		if (!(o instanceof Course))
+			return false;
+		else
+		{
+			Course objCourse = (Course) o;
+			if (course.equals(objCourse.course)
+				&& letterGrade == objCourse.letterGrade)
+				return true;
+			else
+				return false;
+		}
+	}
+}

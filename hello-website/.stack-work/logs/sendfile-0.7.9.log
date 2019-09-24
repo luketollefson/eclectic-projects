@@ -1,0 +1,26 @@
+Configuring sendfile-0.7.9...
+Preprocessing library for sendfile-0.7.9..
+<command-line>:0:20: warning: ISO C99 requires whitespace after the macro name
+<command-line>:0:20: warning: ISO C99 requires whitespace after the macro name
+Building library for sendfile-0.7.9..
+[1 of 7] Compiling Network.Socket.SendFile.Iter ( src/Network/Socket/SendFile/Iter.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Iter.o )
+[2 of 7] Compiling Network.Socket.SendFile.Linux ( .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Linux.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Linux.o )
+
+[;1msrc/Network/Socket/SendFile/Linux.hsc:5:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Int32’ from module ‘Data.Int’ is redundant[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m5 |[0m[0m [;1m[35mimport Data.Int (Int32, Int64)[0m[0m    -- Int64 is imported on 64-bit systems
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Network/Socket/SendFile/Linux.hsc:6:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Word32’ from module ‘Data.Word’ is redundant[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m6 |[0m[0m [;1m[35mimport Data.Word (Word32, Word64)[0m[0m -- Word64 is imported on 64-bit systems
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[3 of 7] Compiling Network.Socket.SendFile.Util ( src/Network/Socket/SendFile/Util.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Util.o )
+[4 of 7] Compiling Network.Socket.SendFile.Portable ( src/Network/Socket/SendFile/Portable.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Portable.o )
+[5 of 7] Compiling Network.Socket.SendFile.Internal ( src/Network/Socket/SendFile/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Internal.o )
+[6 of 7] Compiling Network.Socket.SendFile ( src/Network/Socket/SendFile.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile.o )
+[7 of 7] Compiling Network.Socket.SendFile.Handle ( src/Network/Socket/SendFile/Handle.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Network/Socket/SendFile/Handle.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/sendfile-0.7.9-6ejuSaYiqaaF4uJa6NpNQq
+Registering library for sendfile-0.7.9..

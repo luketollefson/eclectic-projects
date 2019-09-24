@@ -1,0 +1,1 @@
+newtype Mu f = InF { outF :: f (Mu f) }

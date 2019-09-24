@@ -1,0 +1,18 @@
+62
+Exceptions allow the program to deal with
+situtations that would normally break the program.
+Say, if the user enters data, if the data is not
+an expected format, and exception can be raised.
+
+Issues with exceptions raise when one starts nesting
+try{} catch{} statements, it can become complicated
+in a hurry. Also, if one designes the program to
+"march-on" during runtime exceptions, it makes the
+program more complicated, as there are more possible
+states for it to be in.
+
+63
+It is important to keep ones code well documented.
+When reading a file with objects inside it, understanding
+what the objects mean, and how to use them is 
+vital to reusablity.

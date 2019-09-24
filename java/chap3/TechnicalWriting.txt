@@ -1,0 +1,28 @@
+69.
+The Java compiler is very helpful in determining what
+syntax errors I have in my code. It is best used by making
+a small correction and recompiling to see if an error dissapears.
+Often one small change can fix many errors at once. It is
+one of the more helpful compilers I have used.
+
+70.
+OOP allows the programmer to encapsulate data and methods
+into one package. If the programmer wants to reuse the
+code, all they have to do is import it, and wallah, it's
+usable. OOP has incresed the resuablity, and therefore
+readablity of code.
+
+71.
+If you needed a user to enter a mixture of words and numebers,
+say "6 plums, 4 apples, 12 peaches". The string could be cut up
+into number and fruit pairs, and the parseInt method would let
+you convert the string "6", or "4", or "12", into an integer.
+The integer could then be used in opperations such as addition.
+
+72.
+Having a large standardised library allows the programmer to
+quickly write programs. By using the library they are not
+reinventing the wheel, nor do they have to care about how the
+methods in say Math are implemented. It also means another
+programmer can look at the code and understand it easier,
+as long as they are familier with the standard library.

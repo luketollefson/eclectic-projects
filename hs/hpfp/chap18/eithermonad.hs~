@@ -1,0 +1,10 @@
+module EitherMonad where
+
+type Founded = Int
+type Coders = Int
+
+data SoftwareShop =
+  Shop {
+      founded     :: Founded
+    , programmers :: Coders
+    } deriving (Eq, Show)

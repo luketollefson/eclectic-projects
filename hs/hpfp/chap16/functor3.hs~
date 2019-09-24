@@ -1,0 +1,1 @@
+data FixMePls a = FixMe | Pls a deriving (Eq, Show)

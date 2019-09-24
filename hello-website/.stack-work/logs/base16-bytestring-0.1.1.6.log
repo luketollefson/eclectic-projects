@@ -1,0 +1,9 @@
+Warning: base16-bytestring.cabal:9:1: The field "copyright" is specified more
+than once at positions 9:1, 12:1
+Configuring base16-bytestring-0.1.1.6...
+Preprocessing library for base16-bytestring-0.1.1.6..
+Building library for base16-bytestring-0.1.1.6..
+[1 of 2] Compiling Data.ByteString.Base16 ( Data/ByteString/Base16.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/ByteString/Base16.o )
+[2 of 2] Compiling Data.ByteString.Base16.Lazy ( Data/ByteString/Base16/Lazy.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/ByteString/Base16/Lazy.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/base16-bytestring-0.1.1.6-17atVnUhDnM13pAkKbwL6I
+Registering library for base16-bytestring-0.1.1.6..

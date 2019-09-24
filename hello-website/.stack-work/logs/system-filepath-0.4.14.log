@@ -1,0 +1,63 @@
+[1 of 2] Compiling Main             ( /tmp/stack10031/system-filepath-0.4.14/Setup.hs, /tmp/stack10031/system-filepath-0.4.14/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/Main.o )
+
+/tmp/stack10031/system-filepath-0.4.14/Setup.hs:7:1: warning: [-Wtabs]
+    Tab character found here, and in 9 further locations.
+    Please use spaces instead.
+  |
+7 |         hooks = Simple.simpleUserHooks
+  | ^^^^^^^^
+[2 of 2] Compiling StackSetupShim   ( /home/luke/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs, /tmp/stack10031/system-filepath-0.4.14/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/StackSetupShim.o )
+Linking /tmp/stack10031/system-filepath-0.4.14/.stack-work/dist/x86_64-linux/Cabal-2.4.0.1/setup/setup ...
+Configuring system-filepath-0.4.14...
+Preprocessing library for system-filepath-0.4.14..
+Building library for system-filepath-0.4.14..
+[1 of 4] Compiling Filesystem.Path.Internal ( lib/Filesystem/Path/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Filesystem/Path/Internal.o )
+
+[;1mlib/Filesystem/Path/Internal.hs:17:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The qualified import of ‘Control.Exception’ is redundant
+      except perhaps to import instances from ‘Control.Exception’
+    To import instances alone, use: import Control.Exception()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m17 |[0m[0m [;1m[35mimport qualified Control.Exception as Exc[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mlib/Filesystem/Path/Internal.hs:26:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Text.Encoding.Error’ is redundant
+      except perhaps to import instances from ‘Data.Text.Encoding.Error’
+    To import instances alone, use: import Data.Text.Encoding.Error()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m26 |[0m[0m [;1m[35mimport           Data.Text.Encoding.Error (UnicodeException)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1mlib/Filesystem/Path/Internal.hs:39:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wtabs[0m[0m[;1m][0m[0m[;1m
+    Tab character found here, and in 170 further locations.
+    Please use spaces instead.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m39 |[0m[0m [;1m[35m        [0m[0m= RootPosix
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^[0m[0m
+[0m[0m[0m[2 of 4] Compiling Filesystem.Path  ( lib/Filesystem/Path.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Filesystem/Path.o )
+
+[;1mlib/Filesystem/Path.hs:17:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wtabs[0m[0m[;1m][0m[0m[;1m
+    Tab character found here, and in 264 further locations.
+    Please use spaces instead.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m17 |[0m[0m [;1m[35m        [0m[0m( FilePath
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^[0m[0m
+[0m[0m[0m[3 of 4] Compiling Filesystem.Path.Rules ( lib/Filesystem/Path/Rules.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Filesystem/Path/Rules.o )
+
+[;1mlib/Filesystem/Path/Rules.hs:10:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wtabs[0m[0m[;1m][0m[0m[;1m
+    Tab character found here, and in 291 further locations.
+    Please use spaces instead.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m10 |[0m[0m [;1m[35m        [0m[0m( Rules
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^[0m[0m
+[0m[0m[0m[4 of 4] Compiling Filesystem.Path.CurrentOS ( lib/Filesystem/Path/CurrentOS.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Filesystem/Path/CurrentOS.o )
+
+[;1mlib/Filesystem/Path/CurrentOS.hs:18:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wtabs[0m[0m[;1m][0m[0m[;1m
+    Tab character found here, and in 23 further locations.
+    Please use spaces instead.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m18 |[0m[0m [;1m[35m        [0m[0m( module Filesystem.Path
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^[0m[0m
+[0m[0m[0mInstalling library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/system-filepath-0.4.14-FRUtJu5zAWTG9MKrRBz8D6
+Registering library for system-filepath-0.4.14..

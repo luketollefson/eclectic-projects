@@ -1,0 +1,15 @@
+70
+The most common examples of logic error are ones where
+the programmer is off by one. It is easy to make this
+error because length of a string is different than the
+index of the last character of the string. Other errors
+can be made if the programmer forgets to properly prime
+an loop, or if the sentinel of a loop is processed.
+
+71
+One can see if they have an infite loop in thier code
+if the condition to terminae the loop does not get
+closer with every iteration. If the variables in the
+condition, as well as the rest of the program state, don't
+change from one interation of the the loop to the next
+the loop will be indefinite.

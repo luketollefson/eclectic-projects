@@ -1,0 +1,7 @@
+Configuring digest-0.0.1.2...
+Preprocessing library for digest-0.0.1.2..
+Building library for digest-0.0.1.2..
+[1 of 2] Compiling Data.Digest.Adler32 ( .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/Digest/Adler32.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/Digest/Adler32.o )
+[2 of 2] Compiling Data.Digest.CRC32 ( .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/Digest/CRC32.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Data/Digest/CRC32.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/digest-0.0.1.2-93hmxvQ2VB3FeV97QkdTpW
+Registering library for digest-0.0.1.2..

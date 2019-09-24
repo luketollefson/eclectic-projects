@@ -1,0 +1,5 @@
+-- as.hs
+module AsPatterns where
+
+isSubseqOf :: (Eq a) => [a] -> [a] -> Bool
+isSubseqOf (x:xs) sup = x `elem` sup && isSubseqOf xs (head $ dropWhile (!=x) sup)

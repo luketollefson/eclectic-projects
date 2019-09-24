@@ -1,0 +1,28 @@
+97
+The fact that the number of coulums can be different
+in every row is advantagous in severl situations.
+For instance, a text file's words (like this one)
+would be broken into a String[][] type, where
+each row represents a line. Since each line
+doesn't have the same number of words. The flexabily
+makes sense here. More often then not however, one
+will use a two dimential array (an array of arrays)
+as a table, where each element has meaningful data.
+If the number of columns of a table were fixed, it
+could potentially eliminate some sytanx that is there
+to ensure one doesn't get a runtime exception. There
+are places for both variable column, and fixed column
+2d arrays, but in general one will used the fixed
+column version
+
+98
+ArrayLists have many benifits. One can remove and add
+new elements to the array. It isn't often that one will
+know the size of an array before hand, and it will likely
+need to expand during the program evaulation. Another benifit
+of ArrayLists is the enhanced for loop syntax for them. One
+has to wonder why Java doesn't allow this syntax for
+ordinary arrays. The drawbacks of ArrayLists, and where
+ordinary arrays have the advantage is performacne. ArrayLists
+have addiontal overhead that ensure that they will be able
+to fit the elements you add to the list.

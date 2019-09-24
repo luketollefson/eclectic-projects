@@ -1,0 +1,4 @@
+validateLength :: Int -> String -> Maybe String
+validateLength maxLen s = if (length s) > maxLen
+                          then Nothing
+                          else Just s

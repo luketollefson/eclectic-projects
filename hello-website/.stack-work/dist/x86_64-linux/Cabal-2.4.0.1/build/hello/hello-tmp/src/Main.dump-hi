@@ -1,0 +1,1797 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-14 15:56:56.840294248 UTC
+
+interface main:Main 8063
+  interface hash: c40c94ecddcdb018b19f67c8b4cbf0b8
+  ABI hash: 8f04ffc34e651913a1fafae836fb8803
+  export-list hash: afc018e1bc67f20c19eac615995fdd4f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ac3ef05beea580294ca2f03543f63d62
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.appTemplate
+  Main.helloBlaze
+  Main.main
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0
+                      base64-bytestring-1.0.0.2 binary-0.8.6.0 blaze-builder-0.4.1.0
+                      blaze-html-0.9.1.1 blaze-markup-0.8.2.2 bytestring-0.10.8.2
+                      containers-0.6.0.1 deepseq-1.4.4.0 directory-1.3.3.0
+                      exceptions-0.10.0 extensible-exceptions-0.1.1.4 filepath-1.4.2.1
+                      ghc-boot-th-8.6.3 ghc-prim-0.5.3 happstack-server-7.5.1.3
+                      hslogger-1.2.12 html-1.0.1.2 integer-gmp-1.0.2.0
+                      monad-control-1.0.2.3 mtl-2.2.2 network-2.8.0.0 network-uri-2.6.1.0
+                      old-locale-1.0.0.7 old-time-1.1.0.3 parsec-3.1.13.0 pretty-1.1.3.6
+                      process-1.6.3.0 sendfile-0.7.9 stm-2.5.0.0 syb-0.7
+                      system-filepath-0.4.14 template-haskell-2.14.0.0 text-1.2.3.1
+                      threads-0.5.1.6 time-1.8.0.2 time-compat-0.1.0.3
+                      transformers-0.5.5.0 transformers-base-0.4.5.2 unix-2.7.2.2
+                      utf8-string-1.0.1.1 xhtml-3000.2.2.1 zlib-0.6.2
+orphans: system-filepath-0.4.14:Filesystem.Path.CurrentOS
+         system-filepath-0.4.14:Filesystem.Path
+         stm-2.5.0.0:Control.Monad.STM syb-0.7:Data.Generics.Instances
+         network-2.8.0.0:Network.Socket time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         ghc-boot-th-8.6.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.3:GHC.LanguageExtensions.Type
+                         happstack-server-7.5.1.3:Happstack.Server.Internal.Monads
+                         monad-control-1.0.2.3:Control.Monad.Trans.Control
+                         network-uri-2.6.1.0:Network.URI
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  blaze-html-0.9.1.1:Text.Blaze.Html 134c7b47577e74a9150bff2f3104d64d
+import  -/  blaze-html-0.9.1.1:Text.Blaze.Html4.Strict e212e54daf2eaef6a88204a356b04b9a
+import  -/  blaze-html-0.9.1.1:Text.Blaze.Html4.Strict.Attributes b57b599ae8d95b3b270a47180ed97fd7
+import  -/  blaze-markup-0.8.2.2:Text.Blaze 08eee273fb762fe4a68feaacb038f42d
+import  -/  blaze-markup-0.8.2.2:Text.Blaze.Internal 8b61f7492bef5639342b1142933e6d0b
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  happstack-server-7.5.1.3:Happstack.Server 38c9f76e4db170b68b567329b10fb0e3
+import  -/  happstack-server-7.5.1.3:Happstack.Server.Internal.Monads 09ba9a84403d22b0e4ba98e2505e5073
+import  -/  happstack-server-7.5.1.3:Happstack.Server.Internal.Types ea2ca403faa1e5da916c169818bf9f88
+import  -/  happstack-server-7.5.1.3:Happstack.Server.Response 5a3b925120f5d96c79f8162a42e4c3f8
+import  -/  happstack-server-7.5.1.3:Happstack.Server.SimpleHTTP ed9aa2f8ad2fac747aad4ae9e2c676f7
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+d156e29b9e124baedb89c173d17c4aa2
+  appTemplate ::
+    GHC.Base.String
+    -> [Text.Blaze.Html.Html]
+    -> Text.Blaze.Html.Html
+    -> Text.Blaze.Html.Html
+  {- Arity: 3, Strictness: <L,U><L,1*U><L,U>m1, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Base.String)
+                   (w1 :: [Text.Blaze.Html.Html])
+                   (w2 :: Text.Blaze.Html.Html) ->
+                 Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.appTemplate85
+                   Main.appTemplate80
+                   Main.appTemplate75
+                   (Text.Blaze.Internal.Append
+                      @ ()
+                      @ ()
+                      (Text.Blaze.Internal.Parent
+                         @ ()
+                         Main.appTemplate70
+                         Main.appTemplate65
+                         Main.appTemplate60
+                         (Text.Blaze.Internal.Append
+                            @ ()
+                            @ ()
+                            (Text.Blaze.Internal.Parent
+                               @ ()
+                               Main.appTemplate55
+                               Main.appTemplate50
+                               Main.appTemplate45
+                               (Text.Blaze.Internal.Content
+                                  @ ()
+                                  (Text.Blaze.Internal.String w)
+                                  GHC.Tuple.()))
+                            (Text.Blaze.Internal.Append
+                               @ ()
+                               @ ()
+                               Main.appTemplate17
+                               (letrec {
+                                  go1 :: [Text.Blaze.Internal.MarkupM ()]
+                                         -> Text.Blaze.Internal.MarkupM ()
+                                    {- Arity: 1, Strictness: <S,U> -}
+                                  = \ (ds :: [Text.Blaze.Internal.MarkupM ()]) ->
+                                    case ds of wild {
+                                      [] -> Main.appTemplate16
+                                      : y ys -> Text.Blaze.Internal.Append @ () @ () y (go1 ys) }
+                                } in
+                                go1 w1))))
+                      (Text.Blaze.Internal.Parent
+                         @ ()
+                         Main.appTemplate11
+                         Main.appTemplate6
+                         Main.appTemplate1
+                         w2))) -}
+7e5ce721410fc5e5541d9131979eb89c
+  appTemplate1 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate5
+                   Main.appTemplate4
+                   Main.appTemplate_t1) -}
+9ce7851ab2c2cd127a2064b903ffc482
+  appTemplate10 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w1) -}
+0557474d701bea1c7db697e53e6f7605
+  appTemplate11 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate15
+                   Main.appTemplate14
+                   Main.appTemplate_t3) -}
+f71664c10f8d9e691e82453f46a6e085
+  appTemplate12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w2
+                   0#
+                   ipv }) -}
+660a5e251747904f7613a93253272b00
+  appTemplate13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("body"#) -}
+54bf8830c8b42480eb55d3d55a1bddd2
+  appTemplate14 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+ea28423edf5cdd26b8e6d5215db11fe8
+  appTemplate15 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w2) -}
+be6a22a5a67de765ecb45c98d917c0d3
+  appTemplate16 :: Text.Blaze.Internal.MarkupM ()
+  {- HasNoCafRefs, Strictness: m10,
+     Unfolding: (Text.Blaze.Internal.Empty @ () GHC.Tuple.()) -}
+fe7e6a2951af7aa4b3e1db41c3131287
+  appTemplate17 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Main.appTemplate40
+                   Main.appTemplate35
+                   Main.appTemplate32
+                   Main.appTemplate18) -}
+80d395fadc76b1890bd9b9c8407c10cc
+  appTemplate18 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Main.appTemplate27
+                   Main.appTemplate22
+                   Main.appTemplate19
+                   Text.Blaze.Html4.Strict.meta) -}
+950383cf482004feecee019cee8d6897
+  appTemplate19 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.appTemplate20) -}
+bdee1bd7e4fe08869a442fea27cbbe5b
+  appTemplate2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.appTemplate_w 0# ipv }) -}
+318310a1006abf510fb1f6559a031d2b
+  appTemplate20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate21) -}
+8bc250ad190d3775947593932781b4e1
+  appTemplate21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Content-Type"#) -}
+8bfb4ea8d6e0b2f2a9ba422ae0fcbfd8
+  appTemplate22 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate26
+                   Main.appTemplate25
+                   Main.appTemplate_t4) -}
+5b67e5a62ae0bc8bb4369ad4b9dd084a
+  appTemplate23 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w3
+                   0#
+                   ipv }) -}
+f6fc7ff5838d2974945f4fee34b91fa2
+  appTemplate24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" http-equiv=\""#) -}
+400cde455fb18ede78c96b86858a7e92
+  appTemplate25 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+65519d8f1ae232e2ce60690bcd01585c
+  appTemplate26 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w3) -}
+269d0d6dca1cdd28b260b19d60be8c75
+  appTemplate27 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate31
+                   Main.appTemplate30
+                   Main.appTemplate_t5) -}
+cfcc544600a69e3f995e8d17a4376e50
+  appTemplate28 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w4
+                   0#
+                   ipv }) -}
+cc36f84091ca8eb0917aeae86b02731b
+  appTemplate29 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("http-equiv"#) -}
+65da73f8884ea83de0eac8243627d672
+  appTemplate3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</body>"#) -}
+86c0a61ebdfdd70690888496785c9aaa
+  appTemplate30 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+db74f2cd4601610ce05fed49d1bea157
+  appTemplate31 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w4) -}
+54acaaa37c86f51c98f4408e64fd3b45
+  appTemplate32 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.appTemplate33) -}
+9b13831ece158756b021c30e978fc612
+  appTemplate33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate34) -}
+dbceba0098fe9a587c50d4fef7be454e
+  appTemplate34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("text/html;charset=utf-8"#) -}
+d2c8420477f01c83de71cc110f06b8df
+  appTemplate35 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate39
+                   Main.appTemplate38
+                   Main.appTemplate_t6) -}
+f3944b2c64b76902419fa304f04fcb48
+  appTemplate36 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w5
+                   0#
+                   ipv }) -}
+de65967c0ade9db0379bc2b60cb98553
+  appTemplate37 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" content=\""#) -}
+e4f6719bb3a878827a8e1b5109b4ab74
+  appTemplate38 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+3c186b3ef4270a75e5fb270a2173be19
+  appTemplate39 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w5) -}
+093873ae728c4bbc1661e25d28d2935d
+  appTemplate4 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+dc1377a1b530b937926e435aba5aa5d1
+  appTemplate40 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate44
+                   Main.appTemplate43
+                   Main.appTemplate_t7) -}
+68f99a96202310517ee6a3cfc0ce85b8
+  appTemplate41 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w6
+                   0#
+                   ipv }) -}
+374e4a6a9510cf0e8c5017c9bd149562
+  appTemplate42 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("content"#) -}
+007a103db873bfc906d85678eb212633
+  appTemplate43 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+9239276649eab993dce9b242b4929494
+  appTemplate44 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w6) -}
+5896f67fe27662064de2459e9b350703
+  appTemplate45 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate49
+                   Main.appTemplate48
+                   Main.appTemplate_t8) -}
+bdc6c0fd6a4a2f7528e77bc1a2443ce7
+  appTemplate46 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w7
+                   0#
+                   ipv }) -}
+023c89e4d76df7eeceae76fa36e2c8f2
+  appTemplate47 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</title>"#) -}
+d5c1413689066ab8e1e814ce3881187f
+  appTemplate48 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t8 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+47400f186e3b1d271aa357748e8b5b53
+  appTemplate49 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w7) -}
+27fab1df1ba68a4935ea60c37b79e6f8
+  appTemplate5 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w) -}
+b3a186258a5adcf86b8862bce0705bae
+  appTemplate50 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate54
+                   Main.appTemplate53
+                   Main.appTemplate_t9) -}
+e5f2677bb4c0b6a70144e0fd61ae75e5
+  appTemplate51 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w8
+                   0#
+                   ipv }) -}
+a8d54c950e8378889b4eebe6f6c9c25f
+  appTemplate52 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<title"#) -}
+5d52f02de12d8b2a6e7052e92cacd8d4
+  appTemplate53 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t9 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+271f642079194de82b329e3f7a4d5c99
+  appTemplate54 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w8) -}
+afd4f71378cc95934c954fcc39936fa2
+  appTemplate55 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate59
+                   Main.appTemplate58
+                   Main.appTemplate_t10) -}
+8afb30fc3f0fb51faf19e4332cb29efe
+  appTemplate56 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w9
+                   0#
+                   ipv }) -}
+4c3b13ad6658ef80985ce112179d44cd
+  appTemplate57 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("title"#) -}
+84f91bc8aa0ab83fa36d7df538d9d0a6
+  appTemplate58 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t10 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+78ac7439953c27e848474f49a120aaea
+  appTemplate59 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w9) -}
+d17d750f8cf82cf9e85590acebbf3ea0
+  appTemplate6 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate10
+                   Main.appTemplate9
+                   Main.appTemplate_t2) -}
+461ee8ba76b940a9fd0cd318250cba93
+  appTemplate60 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate64
+                   Main.appTemplate63
+                   Main.appTemplate_t11) -}
+8c49614ca77c8aba855038503db050e8
+  appTemplate61 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w10
+                   0#
+                   ipv }) -}
+5490dc2106bfdcdebc80628ec630ab90
+  appTemplate62 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</head>"#) -}
+7a5c7b359848315e0ef86655ab7b4ce0
+  appTemplate63 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t11 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+4c0038ebb61be95a77dfc65962a2b1b3
+  appTemplate64 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w10) -}
+55d069053d28da126d6129656a31a174
+  appTemplate65 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate69
+                   Main.appTemplate68
+                   Main.appTemplate_t12) -}
+6fb7858ec5db9313f4bab3fe908d9f71
+  appTemplate66 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w11
+                   0#
+                   ipv }) -}
+a20f9027ec8efb0e47d3f36c3505b8e7
+  appTemplate67 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<head"#) -}
+93b943dce1404f6778720fa31107e928
+  appTemplate68 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t12 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+58b93787f2f2a51ac496457dba0c50ac
+  appTemplate69 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w11) -}
+a0c1f5145360730dcf9f55594709ffd7
+  appTemplate7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w1
+                   0#
+                   ipv }) -}
+291f45d07d665e309658bb32938036c2
+  appTemplate70 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate74
+                   Main.appTemplate73
+                   Main.appTemplate_t13) -}
+a93414faa7da46cc09ce88f6b4103865
+  appTemplate71 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w12
+                   0#
+                   ipv }) -}
+4329fc1d75db147186ee4a511b1e41c0
+  appTemplate72 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("head"#) -}
+dc343ae1dc0c396e0a39be39b4659c00
+  appTemplate73 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t13 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+6b99f70db97848fb5be28ae4a858e66b
+  appTemplate74 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w12) -}
+ac79fdd666c95a9330da3070ecdffa01
+  appTemplate75 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate79
+                   Main.appTemplate78
+                   Main.appTemplate_t14) -}
+626182302bd45588dfbfc4842c65a322
+  appTemplate76 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w13
+                   0#
+                   ipv }) -}
+367d723925a003ace1e2913b1dc34274
+  appTemplate77 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</html>"#) -}
+b31d79202fc12459ca549d02a97d3a94
+  appTemplate78 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t14 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+1c0c4826ad4d4784f4b897ffa50cde42
+  appTemplate79 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w13) -}
+4775a71ee0ccad9b8ee4057fdc2d0d02
+  appTemplate8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<body"#) -}
+116cdbd84e1c6bbac0855b50480537f8
+  appTemplate80 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate84
+                   Main.appTemplate83
+                   Main.appTemplate_t15) -}
+4b85570e9b226e3b223c55e9136e3886
+  appTemplate81 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w14
+                   0#
+                   ipv }) -}
+efd68976dbbea9593ecb2e7cd8f825f6
+  appTemplate82 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<html"#) -}
+f8d4cd897040cdc90dcd5c21cadc3489
+  appTemplate83 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t15 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+2bcfdb0923d7976bb064b293fe8ef0fc
+  appTemplate84 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w14) -}
+629af2e1a74dde49fc37688dcd3eb60e
+  appTemplate85 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate89
+                   Main.appTemplate88
+                   Main.appTemplate_t16) -}
+298e513ec968a7dcf07b96b1f2158507
+  appTemplate86 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter
+                   ipv1
+                   4#
+                   Main.appTemplate_w15
+                   0#
+                   ipv }) -}
+5d52bf28420ca8436b7e2bd332401bac
+  appTemplate87 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("html"#) -}
+c8d9d6b7a42538fb2ae4b891102ae01c
+  appTemplate88 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t16 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+e23b9bbd1c10d7b0aeb6dbcd97b18efa
+  appTemplate89 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.appTemplate_w15) -}
+03be689395e830b0d0514b1bb2ba540a
+  appTemplate9 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t2 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+83bb70e47b82f763275dd17d9b473d35
+  appTemplate_t1 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate2 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+b93df2809c73ca022382d1b7df5cbf82
+  appTemplate_t10 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate56 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+a9fbf13d488196ec5821339136ea74f5
+  appTemplate_t11 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate61 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+ebc46e7f364c266768d23e50927df238
+  appTemplate_t12 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate66 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+420d09aee677c000c6525e016dc45cdc
+  appTemplate_t13 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate71 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+14bfc9725d126f1e4f7b8f5fc5dc2de7
+  appTemplate_t14 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate76 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+aa953bbcf96123ef4a70447f3839941c
+  appTemplate_t15 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate81 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+c1e5fed62d02fba6d0c5eed66d4cdea2
+  appTemplate_t16 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate86 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+617097c28a4ec7858b12364bd4d733bb
+  appTemplate_t2 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate7 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+87b019bcce4f7a585280a46b6003e6da
+  appTemplate_t3 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate12 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+62cb9919b2c38a2aefaccef2590f0340
+  appTemplate_t4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate23 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+aa445780475b58d1efd344fb6e14ea62
+  appTemplate_t5 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate28 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+e00aec2df675970d9e4edc35d2872852
+  appTemplate_t6 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate36 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+97a9185b00bf56a34cc75ab90603ba7b
+  appTemplate_t7 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate41 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+e9705c8f70e0d4f197b241ee948a56ce
+  appTemplate_t8 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate46 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+6c3e9117e79f95e384f6233bc472d5fb
+  appTemplate_t9 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.appTemplate51 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+41a6853f77c7e4cbf5bc1973d53a478e
+  appTemplate_w :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate3) -}
+9255aaee09a6c601794d210286ca728c
+  appTemplate_w1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate8) -}
+85b9dae093569b6101c6c9e559a74e77
+  appTemplate_w10 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate62) -}
+914438f73b516ca26636bf133cac6fa5
+  appTemplate_w11 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate67) -}
+7490020f4d88ec5c6a1a8f624f3fea38
+  appTemplate_w12 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate72) -}
+249c5ae8a3580821cfc4a073a239f60a
+  appTemplate_w13 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate77) -}
+b5c377f6ba41162e7ca367f81548d8a2
+  appTemplate_w14 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate82) -}
+2575e7cfa5e701f3f6f089ab226d9f82
+  appTemplate_w15 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate87) -}
+3f6f74e71db7822e74b59061603c4ab1
+  appTemplate_w2 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate13) -}
+ce893c718ce1624b4d45c6f077c2d979
+  appTemplate_w3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate24) -}
+8f29370dd6a61a3adc02b0b43ef140c9
+  appTemplate_w4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate29) -}
+e5317c7b8955390262e3beb02807565e
+  appTemplate_w5 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate37) -}
+11c60c112fe099429ead814464f21cd4
+  appTemplate_w6 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate42) -}
+6a3c946611f8c41e0ec801e0196c418b
+  appTemplate_w7 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate47) -}
+64dc5fd84fe99520de65ef06cf020bfe
+  appTemplate_w8 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate52) -}
+24b4c2fe154bc03239af1d8cd83972c6
+  appTemplate_w9 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.appTemplate57) -}
+3e0f27dfa7cc4ec60ef4fe2ce9103647
+  helloBlaze ::
+    Happstack.Server.Internal.Monads.ServerPart
+      Happstack.Server.Internal.Types.Response
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Main.helloBlaze1
+                  `cast`
+                ((<Happstack.Server.Internal.Types.Request>_R
+                  ->_R Sym (Control.Monad.Trans.Maybe.N:MaybeT[0]
+                                <GHC.Types.IO>_R
+                                <(Data.Either.Either
+                                    Happstack.Server.Internal.Types.Response
+                                    Happstack.Server.Internal.Types.Response,
+                                  Happstack.Server.Internal.Monads.SetAppend
+                                    (Data.Semigroup.Internal.Dual
+                                       (Data.Semigroup.Internal.Endo
+                                          Happstack.Server.Internal.Types.Response)))>_N) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                                                      <Happstack.Server.Internal.Monads.SetAppend
+                                                                                                         (Data.Semigroup.Internal.Dual
+                                                                                                            (Data.Semigroup.Internal.Endo
+                                                                                                               Happstack.Server.Internal.Types.Response))>_N
+                                                                                                      <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                         GHC.Types.IO>_R
+                                                                                                      <Data.Either.Either
+                                                                                                         Happstack.Server.Internal.Types.Response
+                                                                                                         Happstack.Server.Internal.Types.Response>_N) ; (Sym (Control.Monad.Trans.Error.N:ErrorT[0]
+                                                                                                                                                                  <Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                  (Happstack.Server.Internal.Monads.N:FilterT[0]
+                                                                                                                                                                       <Happstack.Server.Internal.Types.Response>_N <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                       GHC.Types.IO>_N)
+                                                                                                                                                                  <Happstack.Server.Internal.Types.Response>_N) ; Sym (Happstack.Server.Internal.Monads.N:WebT[0]
+                                                                                                                                                                                                                           <GHC.Types.IO>_R) <Happstack.Server.Internal.Types.Response>_N))) ; (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                                                                                                                                                                                                                                                                                         <*>_N
+                                                                                                                                                                                                                                                                                                         <Happstack.Server.Internal.Types.Request>_R
+                                                                                                                                                                                                                                                                                                         <Happstack.Server.Internal.Monads.WebT
+                                                                                                                                                                                                                                                                                                            GHC.Types.IO>_R
+                                                                                                                                                                                                                                                                                                         <Happstack.Server.Internal.Types.Response>_N) ; Sym (Happstack.Server.Internal.Monads.N:ServerPartT[0]
+                                                                                                                                                                                                                                                                                                                                                                  <GHC.Types.IO>_R) <Happstack.Server.Internal.Types.Response>_N)) -}
+c4f86486107cc36ba339d1ca72630092
+  helloBlaze1 ::
+    Happstack.Server.Internal.Types.Request
+    -> GHC.Types.IO
+         (GHC.Maybe.Maybe
+            (Data.Either.Either
+               Happstack.Server.Internal.Types.Response
+               Happstack.Server.Internal.Types.Response,
+             Happstack.Server.Internal.Monads.SetAppend
+               (Data.Semigroup.Internal.Dual
+                  (Data.Semigroup.Internal.Endo
+                     Happstack.Server.Internal.Types.Response))))
+  {- Arity: 1, Strictness: <L,A>, Inline: [2],
+     Unfolding: InlineRule (1, True, True)
+                (\ (w :: Happstack.Server.Internal.Types.Request) ->
+                 Main.helloBlaze2) -}
+2c40fde4ca8d8f4574b3bfeb37cd5d8a
+  helloBlaze10 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m1,
+     Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.helloBlaze25
+                   Main.helloBlaze20
+                   Main.helloBlaze15
+                   Main.helloBlaze11) -}
+c2e7e6e6532771a6f28b5a48cb780ae3
+  helloBlaze11 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Main.helloBlaze12
+                   GHC.Tuple.()) -}
+90906a27a1ea3c74264e05ce4a801faa
+  helloBlaze12 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.helloBlaze13) -}
+6924d8949ef4b5a33d58391ded93ff38
+  helloBlaze13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze14) -}
+8dc56f9662521e39efcfcf4a806ebf59
+  helloBlaze14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("hello, blaze!"#) -}
+c377a1d05cc538fd5ffc40d1778a164e
+  helloBlaze15 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.helloBlaze19
+                   Main.helloBlaze18
+                   Main.helloBlaze_t1) -}
+86e4cd56b064311e14b7075204746142
+  helloBlaze16 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.helloBlaze_w 0# ipv }) -}
+3394732dc815815938bec541923e49cd
+  helloBlaze17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("</p>"#) -}
+e3dcfbc6ac986c1bc0109cff3d55417d
+  helloBlaze18 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.helloBlaze_t1 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+f17593ce9928e7258cd97c7e3802ee88
+  helloBlaze19 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.helloBlaze_w) -}
+6f8655f78188cc03f9b8c517b1ade2a1
+  helloBlaze2 ::
+    GHC.Types.IO
+      (GHC.Maybe.Maybe
+         (Data.Either.Either
+            Happstack.Server.Internal.Types.Response
+            Happstack.Server.Internal.Types.Response,
+          Happstack.Server.Internal.Monads.SetAppend
+            (Data.Semigroup.Internal.Dual
+               (Data.Semigroup.Internal.Endo
+                  Happstack.Server.Internal.Types.Response))))
+  {- Unfolding: (Happstack.Server.Internal.Monads.$w$c<*>1
+                   @ GHC.Types.IO
+                   GHC.Base.$fMonadIO1
+                     `cast`
+                   (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <a -> GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R))
+                   GHC.Base.$fApplicativeIO4
+                     `cast`
+                   (forall (a :: <*>_N). <a>_R ->_R Sym (GHC.Types.N:IO[0] <a>_R))
+                   @ Happstack.Server.Internal.Types.Response
+                   @ Happstack.Server.Internal.Types.Response
+                   Main.helloBlaze61
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <GHC.Maybe.Maybe
+                                (Data.Either.Either
+                                   Happstack.Server.Internal.Types.Response
+                                   (Happstack.Server.Internal.Types.Response
+                                    -> Happstack.Server.Internal.Types.Response),
+                                 Happstack.Server.Internal.Monads.SetAppend
+                                   (Data.Semigroup.Internal.Dual
+                                      (Data.Semigroup.Internal.Endo
+                                         Happstack.Server.Internal.Types.Response)))>_R) ; (Sym (Control.Monad.Trans.Maybe.N:MaybeT[0]
+                                                                                                     <GHC.Types.IO>_R
+                                                                                                     <(Data.Either.Either
+                                                                                                         Happstack.Server.Internal.Types.Response
+                                                                                                         (Happstack.Server.Internal.Types.Response
+                                                                                                          -> Happstack.Server.Internal.Types.Response),
+                                                                                                       Happstack.Server.Internal.Monads.SetAppend
+                                                                                                         (Data.Semigroup.Internal.Dual
+                                                                                                            (Data.Semigroup.Internal.Endo
+                                                                                                               Happstack.Server.Internal.Types.Response)))>_N) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                                                                                                                           <Happstack.Server.Internal.Monads.SetAppend
+                                                                                                                                                                              (Data.Semigroup.Internal.Dual
+                                                                                                                                                                                 (Data.Semigroup.Internal.Endo
+                                                                                                                                                                                    Happstack.Server.Internal.Types.Response))>_N
+                                                                                                                                                                           <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                              GHC.Types.IO>_R
+                                                                                                                                                                           <Data.Either.Either
+                                                                                                                                                                              Happstack.Server.Internal.Types.Response
+                                                                                                                                                                              (Happstack.Server.Internal.Types.Response
+                                                                                                                                                                               -> Happstack.Server.Internal.Types.Response)>_N) ; (Sym (Control.Monad.Trans.Error.N:ErrorT[0]
+                                                                                                                                                                                                                                            <Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                                                                                            (Happstack.Server.Internal.Monads.N:FilterT[0]
+                                                                                                                                                                                                                                                 <Happstack.Server.Internal.Types.Response>_N <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                                                                                                 GHC.Types.IO>_N)
+                                                                                                                                                                                                                                            <Happstack.Server.Internal.Types.Response
+                                                                                                                                                                                                                                             -> Happstack.Server.Internal.Types.Response>_N) ; Sym (Happstack.Server.Internal.Monads.N:WebT[0]
+                                                                                                                                                                                                                                                                                                        <GHC.Types.IO>_R) <Happstack.Server.Internal.Types.Response
+                                                                                                                                                                                                                                                                                                                           -> Happstack.Server.Internal.Types.Response>_N))))
+                   Main.helloBlaze3
+                     `cast`
+                   (Nth:3
+                        (<Happstack.Server.Internal.Types.Request>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <GHC.Maybe.Maybe
+                                          (Data.Either.Either
+                                             Happstack.Server.Internal.Types.Response
+                                             Happstack.Server.Internal.Types.Response,
+                                           Happstack.Server.Internal.Monads.FilterFun
+                                             Happstack.Server.Internal.Types.Response)>_R) ; (Sym (Control.Monad.Trans.Maybe.N:MaybeT[0]
+                                                                                                       <GHC.Types.IO>_R
+                                                                                                       <(Data.Either.Either
+                                                                                                           Happstack.Server.Internal.Types.Response
+                                                                                                           Happstack.Server.Internal.Types.Response,
+                                                                                                         Happstack.Server.Internal.Monads.FilterFun
+                                                                                                           Happstack.Server.Internal.Types.Response)>_N) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                                                                                                                     <Happstack.Server.Internal.Monads.FilterFun
+                                                                                                                                                                        Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                     <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                        GHC.Types.IO>_R
+                                                                                                                                                                     <Data.Either.Either
+                                                                                                                                                                        Happstack.Server.Internal.Types.Response
+                                                                                                                                                                        Happstack.Server.Internal.Types.Response>_N) ; (Sym (Control.Monad.Trans.Error.N:ErrorT[0]
+                                                                                                                                                                                                                                 <Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                                                                                 (Happstack.Server.Internal.Monads.N:FilterT[0]
+                                                                                                                                                                                                                                      <Happstack.Server.Internal.Types.Response>_N <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                                                                                      GHC.Types.IO>_N)
+                                                                                                                                                                                                                                 <Happstack.Server.Internal.Types.Response>_N) ; Sym (Happstack.Server.Internal.Monads.N:WebT[0]
+                                                                                                                                                                                                                                                                                          <GHC.Types.IO>_R) <Happstack.Server.Internal.Types.Response>_N)))))) -}
+8d5653cb24c549238beb570971cbcd66
+  helloBlaze20 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.helloBlaze24
+                   Main.helloBlaze23
+                   Main.helloBlaze_t2) -}
+8f661506cd8d2df01643f4a959872c4c
+  helloBlaze21 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.helloBlaze_w1 0# ipv }) -}
+efdb5440e2711db0c8dcf47a6af35738
+  helloBlaze22 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<p"#) -}
+0d5da43b870cc2630dc163b143c8aaeb
+  helloBlaze23 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.helloBlaze_t2 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+8e8dd6ef1f2fcf48fe3b24a31db23a1c
+  helloBlaze24 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.helloBlaze_w1) -}
+50d06a89155a07a07e66eac15dae20c8
+  helloBlaze25 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.helloBlaze29
+                   Main.helloBlaze28
+                   Main.helloBlaze_t3) -}
+527090b638455eb821d751fdaec6616d
+  helloBlaze26 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.helloBlaze_w2 0# ipv }) -}
+9e0a94b01278e08ae3dd0fc4b9a46399
+  helloBlaze27 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("p"#) -}
+11db7811f32b7821bfcdf29c3adbd9f5
+  helloBlaze28 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.helloBlaze_t3 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+4415285c7cce47d273fde6c21b7b3712
+  helloBlaze29 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.helloBlaze_w2) -}
+00b9573531908a37b2ee491a67f76631
+  helloBlaze3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Maybe.Maybe
+            (Data.Either.Either
+               Happstack.Server.Internal.Types.Response
+               Happstack.Server.Internal.Types.Response,
+             Happstack.Server.Internal.Monads.SetAppend
+               (Data.Semigroup.Internal.Dual
+                  (Data.Semigroup.Internal.Endo
+                     Happstack.Server.Internal.Types.Response))) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# eta, Main.helloBlaze4 #)) -}
+3d33dfcb9ace6307b45955a9c5322166
+  helloBlaze30 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m1,
+     Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.appTemplate70
+                   Main.appTemplate65
+                   Main.appTemplate60
+                   Main.helloBlaze31) -}
+1fda0755093bd9edf92aac03161f6bf8
+  helloBlaze31 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Append
+                   @ ()
+                   @ ()
+                   Main.helloBlaze56
+                   Main.helloBlaze32) -}
+42dc54d6f3f114ee71d76ab9a3c7bdd8
+  helloBlaze32 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Append
+                   @ ()
+                   @ ()
+                   Main.appTemplate17
+                   Main.helloBlaze33) -}
+9d8ee08439208fd9866b9b92aac312dc
+  helloBlaze33 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Append
+                   @ ()
+                   @ ()
+                   Main.helloBlaze34
+                   Main.appTemplate16) -}
+ae9fb9196d6adce47e15ac340a87501d
+  helloBlaze34 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Main.helloBlaze54
+                   Main.helloBlaze52
+                   Main.helloBlaze49
+                   Main.helloBlaze35) -}
+3fbf570b2c0e525bca2c51dcde71671a
+  helloBlaze35 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m8,
+     Unfolding: (Text.Blaze.Internal.AddAttribute
+                   @ ()
+                   Main.helloBlaze44
+                   Main.helloBlaze39
+                   Main.helloBlaze36
+                   Text.Blaze.Html4.Strict.meta) -}
+188c19a125224d4812d3dceadf64efcf
+  helloBlaze36 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.helloBlaze37) -}
+cd3a2e47c390424784e246f6c0c5b6cd
+  helloBlaze37 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze38) -}
+c5225918a92b9450cd0b975fc9d2dc98
+  helloBlaze38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("keywords"#) -}
+94b97b189806b69997e03f19da4c148f
+  helloBlaze39 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.helloBlaze43
+                   Main.helloBlaze42
+                   Main.helloBlaze_t4) -}
+62b17ddc8ff0415d3ec792bb82e08dc2
+  helloBlaze4 ::
+    GHC.Maybe.Maybe
+      (Data.Either.Either
+         Happstack.Server.Internal.Types.Response
+         Happstack.Server.Internal.Types.Response,
+       Happstack.Server.Internal.Monads.SetAppend
+         (Data.Semigroup.Internal.Dual
+            (Data.Semigroup.Internal.Endo
+               Happstack.Server.Internal.Types.Response)))
+  {- Strictness: m2,
+     Unfolding: (GHC.Maybe.Just
+                   @ (Data.Either.Either
+                        Happstack.Server.Internal.Types.Response
+                        Happstack.Server.Internal.Types.Response,
+                      Happstack.Server.Internal.Monads.SetAppend
+                        (Data.Semigroup.Internal.Dual
+                           (Data.Semigroup.Internal.Endo
+                              Happstack.Server.Internal.Types.Response)))
+                   Main.helloBlaze5) -}
+596723c240ec647c9c4cf69fc1dc5a2f
+  helloBlaze40 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.helloBlaze_w3 0# ipv }) -}
+6749eefd3df67af75525e6f611fbf766
+  helloBlaze41 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" name=\""#) -}
+23dc1a3e60d34b4f77d9d195100701b2
+  helloBlaze42 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.helloBlaze_t4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+4c3665fa21497f639bdb87281394a985
+  helloBlaze43 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.helloBlaze_w3) -}
+62fe4cbb24dde711e4215a63ecc43360
+  helloBlaze44 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.helloBlaze48
+                   Main.helloBlaze47
+                   Main.helloBlaze_t5) -}
+7fc76c67a92205269af1a3c391afda07
+  helloBlaze45 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s2 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        10#
+                        s2 of ds1 { (#,#) ipv ipv1 ->
+                 Text.Blaze.Internal.$wouter ipv1 4# Main.helloBlaze_w4 0# ipv }) -}
+cd233b0b89b3eb8631534ba67d16bfaf
+  helloBlaze46 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("name"#) -}
+7a443ba5a6af35e34d476da8672fccd5
+  helloBlaze47 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.helloBlaze_t5 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+e48c5a06f46f847a1b1485084b819599
+  helloBlaze48 :: [GHC.Types.Char] -> [GHC.Types.Char]
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++ @ GHC.Types.Char Main.helloBlaze_w4) -}
+e630eb37b051a408890cbef30406edd5
+  helloBlaze49 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.helloBlaze50) -}
+4085453d360fee84366c8a42d8e0e93a
+  helloBlaze5 ::
+    (Data.Either.Either
+       Happstack.Server.Internal.Types.Response
+       Happstack.Server.Internal.Types.Response,
+     Happstack.Server.Internal.Monads.SetAppend
+       (Data.Semigroup.Internal.Dual
+          (Data.Semigroup.Internal.Endo
+             Happstack.Server.Internal.Types.Response)))
+  {- Strictness: m,
+     Unfolding: ((Main.helloBlaze6,
+                  Happstack.Server.Internal.Monads.$fAlternativeServerPartT3)) -}
+863269556f40ce99083003411c692e67
+  helloBlaze50 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze51) -}
+615ea834421decc2a9b76f61f03a3b25
+  helloBlaze51 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("happstack, blaze, html"#) -}
+249f2bddbadfb96452228a4e09834e61
+  helloBlaze52 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate39
+                   Main.helloBlaze53
+                   Main.appTemplate_t6) -}
+5342e00fefa0c189559974824e74cd1b
+  helloBlaze53 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t6 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+93e501060f2a3fe11c0d285de711a882
+  helloBlaze54 :: Text.Blaze.Internal.StaticString
+  {- Strictness: m,
+     Unfolding: (Text.Blaze.Internal.StaticString
+                   Main.appTemplate44
+                   Main.helloBlaze55
+                   Main.appTemplate_t7) -}
+31c4ca78b2ebeab3e7bcb3d9e27af8ce
+  helloBlaze55 :: Data.ByteString.Internal.ByteString
+  {- Unfolding: (case Main.appTemplate_t7 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 Data.Text.Encoding.$wencodeUtf8 ww1 ww2 ww3 }) -}
+e45b35793460623ab02d33e6db25f6bf
+  helloBlaze56 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m1,
+     Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.appTemplate55
+                   Main.appTemplate50
+                   Main.appTemplate45
+                   Main.helloBlaze57) -}
+abc222278bfa0b3948bf676fcb9b0db2
+  helloBlaze57 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Main.helloBlaze58
+                   GHC.Tuple.()) -}
+46cb7ed854021afaa741321fdf86c528
+  helloBlaze58 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m2,
+     Unfolding: (Text.Blaze.Internal.String Main.helloBlaze59) -}
+49f19a772648bdaeab0567cfc25a9467
+  helloBlaze59 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze60) -}
+49779d09369e6edcd22cdd4f3d8c54ac
+  helloBlaze6 ::
+    Data.Either.Either
+      Happstack.Server.Internal.Types.Response
+      Happstack.Server.Internal.Types.Response
+  {- Strictness: m2,
+     Unfolding: (Data.Either.Right
+                   @ Happstack.Server.Internal.Types.Response
+                   @ Happstack.Server.Internal.Types.Response
+                   Main.helloBlaze_eta) -}
+c2e501f10e64d6c3d4e3103ad57f5260
+  helloBlaze60 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Hello, Blaze!"#) -}
+8fd74888f92652ad1b5393caff11fdb4
+  helloBlaze61 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Maybe.Maybe
+            (Data.Either.Either
+               Happstack.Server.Internal.Types.Response
+               (Happstack.Server.Internal.Types.Response
+                -> Happstack.Server.Internal.Types.Response),
+             Happstack.Server.Internal.Monads.SetAppend
+               (Data.Semigroup.Internal.Dual
+                  (Data.Semigroup.Internal.Endo
+                     Happstack.Server.Internal.Types.Response))) #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# s, Main.helloBlaze62 #)) -}
+5ebe08c5be96b042ab3a018e6b72f173
+  helloBlaze62 ::
+    GHC.Maybe.Maybe
+      (Data.Either.Either
+         Happstack.Server.Internal.Types.Response
+         (Happstack.Server.Internal.Types.Response
+          -> Happstack.Server.Internal.Types.Response),
+       Happstack.Server.Internal.Monads.SetAppend
+         (Data.Semigroup.Internal.Dual
+            (Data.Semigroup.Internal.Endo
+               Happstack.Server.Internal.Types.Response)))
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Maybe.Just
+                   @ (Data.Either.Either
+                        Happstack.Server.Internal.Types.Response
+                        (Happstack.Server.Internal.Types.Response
+                         -> Happstack.Server.Internal.Types.Response),
+                      Happstack.Server.Internal.Monads.SetAppend
+                        (Data.Semigroup.Internal.Dual
+                           (Data.Semigroup.Internal.Endo
+                              Happstack.Server.Internal.Types.Response)))
+                   Main.helloBlaze63) -}
+056fa95aaf78987198806ad677621d9e
+  helloBlaze63 ::
+    (Data.Either.Either
+       Happstack.Server.Internal.Types.Response
+       (Happstack.Server.Internal.Types.Response
+        -> Happstack.Server.Internal.Types.Response),
+     Happstack.Server.Internal.Monads.SetAppend
+       (Data.Semigroup.Internal.Dual
+          (Data.Semigroup.Internal.Endo
+             Happstack.Server.Internal.Types.Response)))
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Happstack.Server.Internal.Monads.$fApplicativeWebT6
+                    @ Happstack.Server.Internal.Types.Response,
+                  Main.helloBlaze64)) -}
+940919f752cd06cf95f4f27de27e77cb
+  helloBlaze64 ::
+    Happstack.Server.Internal.Monads.SetAppend
+      (Data.Semigroup.Internal.Dual
+         (Data.Semigroup.Internal.Endo
+            Happstack.Server.Internal.Types.Response))
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Happstack.Server.Internal.Monads.Append
+                   @ (Data.Semigroup.Internal.Dual
+                        (Data.Semigroup.Internal.Endo
+                           Happstack.Server.Internal.Types.Response))
+                   Main.helloBlaze65
+                     `cast`
+                   (Sym (Data.Semigroup.Internal.N:Dual[0]
+                             (Data.Semigroup.Internal.N:Endo[0]
+                                  <Happstack.Server.Internal.Types.Response>_R)))) -}
+79bdfe1d1862476d0fb83d68084c0108
+  helloBlaze65 ::
+    Happstack.Server.Internal.Types.Response
+    -> Happstack.Server.Internal.Types.Response
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (x3 :: Happstack.Server.Internal.Types.Response) ->
+                 case x3 of wild {
+                   Happstack.Server.Internal.Types.Response ds ds1 ds2 ds3 ds4
+                   -> Happstack.Server.Internal.Types.Response
+                        Happstack.Server.Response.$fToMessage()1
+                        ds1
+                        ds2
+                        ds3
+                        ds4
+                   Happstack.Server.Internal.Types.SendFile ds ds1 ds2 ds3 ds4 ds5 ds6
+                   -> Happstack.Server.Internal.Types.SendFile
+                        Happstack.Server.Response.$fToMessage()1
+                        ds1
+                        ds2
+                        ds3
+                        ds4
+                        ds5
+                        ds6 }) -}
+68b25d6a4b01b5b2f3413f45e4998d78
+  helloBlaze7 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m1,
+     Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.appTemplate85
+                   Main.appTemplate80
+                   Main.appTemplate75
+                   Main.helloBlaze8) -}
+48126ca22de8cf3953f5c03e53c43002
+  helloBlaze8 :: Text.Blaze.Internal.MarkupM ()
+  {- Unfolding: (Text.Blaze.Internal.Append
+                   @ ()
+                   @ ()
+                   Main.helloBlaze30
+                   Main.helloBlaze9) -}
+c99dbe8c26683475b64857cc00900c00
+  helloBlaze9 :: Text.Blaze.Internal.MarkupM ()
+  {- Strictness: m1,
+     Unfolding: (Text.Blaze.Internal.Parent
+                   @ ()
+                   Main.appTemplate11
+                   Main.appTemplate6
+                   Main.appTemplate1
+                   Main.helloBlaze10) -}
+5e7effc118bce1f9f4f2fa85a9fe8ba6
+  helloBlaze_eta :: Happstack.Server.Internal.Types.Response
+  {- Unfolding: (Happstack.Server.Response.$fToMessageMarkupM_$ctoResponse
+                   Main.helloBlaze7) -}
+6d446a7f1ffd69cbf9741888f70e22d8
+  helloBlaze_t1 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.helloBlaze16 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+596a35c9eeb2b2f81bfd91e536aafaf9
+  helloBlaze_t2 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.helloBlaze21 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+9f8aa22a54cec6959b5e6d68ed923ba6
+  helloBlaze_t3 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.helloBlaze26 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+e04405817520a63a0ac2d7fac6c587c7
+  helloBlaze_t4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.helloBlaze40 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+66e28b7a5f5ec72ceb21419c4440a77b
+  helloBlaze_t5 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld, Data.Text.Internal.Text #)
+                        Main.helloBlaze45 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+60c3a6ca15a2666d826fbc41af41dd6d
+  helloBlaze_w :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze17) -}
+d0128deb4ef35deaa5a883b68c4ba637
+  helloBlaze_w1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze22) -}
+1253ea69bfb0e0b989d1ad394947494b
+  helloBlaze_w2 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze27) -}
+1266bebe04e292044e9139b3b3dd2315
+  helloBlaze_w3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze41) -}
+a8f5953477445277acd2c1627633a46b
+  helloBlaze_w4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.helloBlaze46) -}
+d955e888b764b42f0058b488d3b5b13d
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+a3e72e22fbc4f2f17dc6930a488f8ee7
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w6 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 Happstack.Server.Internal.Listen.listen1
+                   Happstack.Server.Internal.Types.nullConf
+                   Main.main2
+                     `cast`
+                   (<Happstack.Server.Internal.Types.Request>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Happstack.Server.Internal.Types.Response>_R))
+                   w6) -}
+5fadebde26fe91489f42f360ec3046a1
+  main2 ::
+    Happstack.Server.Internal.Types.Request
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Happstack.Server.Internal.Types.Response #)
+  {- Arity: 2, Strictness: <L,A><S,U>,
+     Unfolding: (\ (req :: Happstack.Server.Internal.Types.Request)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Main.helloBlaze2
+                        `cast`
+                      (Nth:3
+                           (<Happstack.Server.Internal.Types.Request>_R
+                            ->_R Sym (Control.Monad.Trans.Maybe.N:MaybeT[0]
+                                          <GHC.Types.IO>_R
+                                          <(Data.Either.Either
+                                              Happstack.Server.Internal.Types.Response
+                                              Happstack.Server.Internal.Types.Response,
+                                            Happstack.Server.Internal.Monads.SetAppend
+                                              (Data.Semigroup.Internal.Dual
+                                                 (Data.Semigroup.Internal.Endo
+                                                    Happstack.Server.Internal.Types.Response)))>_N) ; (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                                                                <Happstack.Server.Internal.Monads.SetAppend
+                                                                                                                   (Data.Semigroup.Internal.Dual
+                                                                                                                      (Data.Semigroup.Internal.Endo
+                                                                                                                         Happstack.Server.Internal.Types.Response))>_N
+                                                                                                                <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                   GHC.Types.IO>_R
+                                                                                                                <Data.Either.Either
+                                                                                                                   Happstack.Server.Internal.Types.Response
+                                                                                                                   Happstack.Server.Internal.Types.Response>_N) ; (Sym (Control.Monad.Trans.Error.N:ErrorT[0]
+                                                                                                                                                                            <Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                            (Happstack.Server.Internal.Monads.N:FilterT[0]
+                                                                                                                                                                                 <Happstack.Server.Internal.Types.Response>_N <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                                 GHC.Types.IO>_N)
+                                                                                                                                                                            <Happstack.Server.Internal.Types.Response>_N) ; Sym (Happstack.Server.Internal.Monads.N:WebT[0]
+                                                                                                                                                                                                                                     <GHC.Types.IO>_R) <Happstack.Server.Internal.Types.Response>_N))) ; (Happstack.Server.Internal.Monads.N:WebT[0]
+                                                                                                                                                                                                                                                                                                              <GHC.Types.IO>_R <Happstack.Server.Internal.Types.Response>_N ; (Control.Monad.Trans.Error.N:ErrorT[0]
+                                                                                                                                                                                                                                                                                                                                                                                   <Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                                                                                                                                                                                                                                   (Happstack.Server.Internal.Monads.N:FilterT[0]
+                                                                                                                                                                                                                                                                                                                                                                                        <Happstack.Server.Internal.Types.Response>_N <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                                                                                                                                                                                                                                        GHC.Types.IO>_N)
+                                                                                                                                                                                                                                                                                                                                                                                   <Happstack.Server.Internal.Types.Response>_N ; (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                                                                                                                                                                                                                                                                                                                                                                                       <Happstack.Server.Internal.Monads.FilterFun
+                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response>_N
+                                                                                                                                                                                                                                                                                                                                                                                                                                       <Control.Monad.Trans.Maybe.MaybeT
+                                                                                                                                                                                                                                                                                                                                                                                                                                          GHC.Types.IO>_R
+                                                                                                                                                                                                                                                                                                                                                                                                                                       <Data.Either.Either
+                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response
+                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response>_N ; (Control.Monad.Trans.Maybe.N:MaybeT[0]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <GHC.Types.IO>_R
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <(Data.Either.Either
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Happstack.Server.Internal.Types.Response
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Happstack.Server.Internal.Types.Response,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Happstack.Server.Internal.Monads.FilterFun
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Happstack.Server.Internal.Types.Response)>_N ; GHC.Types.N:IO[0]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <GHC.Maybe.Maybe
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       (Data.Either.Either
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Happstack.Server.Internal.Monads.FilterFun
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Happstack.Server.Internal.Types.Response)>_R)))))
+                        s of ds { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   GHC.Maybe.Nothing
+                   -> case Happstack.Server.SimpleHTTP.simpleHTTP_n of wild1 {
+                        Happstack.Server.Internal.Types.Response ds7 ds8 ds9 ds10 ds11
+                        -> case ds11 of wild2 {
+                             GHC.Maybe.Nothing -> (# ipv, wild1 #)
+                             GHC.Maybe.Just altValidator
+                             -> (altValidator wild1)
+                                  `cast`
+                                (GHC.Types.N:IO[0] <Happstack.Server.Internal.Types.Response>_R)
+                                  ipv }
+                        Happstack.Server.Internal.Types.SendFile ds7 ds8 ds9 ds10 ds11 ds12 ds13
+                        -> case ds10 of wild2 {
+                             GHC.Maybe.Nothing -> (# ipv, wild1 #)
+                             GHC.Maybe.Just altValidator
+                             -> (altValidator wild1)
+                                  `cast`
+                                (GHC.Types.N:IO[0] <Happstack.Server.Internal.Types.Response>_R)
+                                  ipv } }
+                   GHC.Maybe.Just a1
+                   -> case a1 of wild1 { (,) e ff ->
+                      case ff of wild2 {
+                        Happstack.Server.Internal.Monads.Set x3
+                        -> case x3
+                                  `cast`
+                                (Data.Semigroup.Internal.N:Dual[0]
+                                     (Data.Semigroup.Internal.N:Endo[0]
+                                          <Happstack.Server.Internal.Types.Response>_R))
+                                  (case e of wild3 {
+                                     Data.Either.Left x -> x Data.Either.Right y -> y }) of wild4 {
+                             Happstack.Server.Internal.Types.Response ds7 ds8 ds9 ds10 ds11
+                             -> case ds11 of wild5 {
+                                  GHC.Maybe.Nothing -> (# ipv, wild4 #)
+                                  GHC.Maybe.Just altValidator
+                                  -> (altValidator wild4)
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Happstack.Server.Internal.Types.Response>_R)
+                                       ipv }
+                             Happstack.Server.Internal.Types.SendFile ds7 ds8 ds9 ds10 ds11 ds12 ds13
+                             -> case ds10 of wild5 {
+                                  GHC.Maybe.Nothing -> (# ipv, wild4 #)
+                                  GHC.Maybe.Just altValidator
+                                  -> (altValidator wild4)
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Happstack.Server.Internal.Types.Response>_R)
+                                       ipv } }
+                        Happstack.Server.Internal.Monads.Append x3
+                        -> case x3
+                                  `cast`
+                                (Data.Semigroup.Internal.N:Dual[0]
+                                     (Data.Semigroup.Internal.N:Endo[0]
+                                          <Happstack.Server.Internal.Types.Response>_R))
+                                  (case e of wild3 {
+                                     Data.Either.Left x -> x Data.Either.Right y -> y }) of wild4 {
+                             Happstack.Server.Internal.Types.Response ds7 ds8 ds9 ds10 ds11
+                             -> case ds11 of wild5 {
+                                  GHC.Maybe.Nothing -> (# ipv, wild4 #)
+                                  GHC.Maybe.Just altValidator
+                                  -> (altValidator wild4)
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Happstack.Server.Internal.Types.Response>_R)
+                                       ipv }
+                             Happstack.Server.Internal.Types.SendFile ds7 ds8 ds9 ds10 ds11 ds12 ds13
+                             -> case ds10 of wild5 {
+                                  GHC.Maybe.Nothing -> (# ipv, wild4 #)
+                                  GHC.Maybe.Just altValidator
+                                  -> (altValidator wild4)
+                                       `cast`
+                                     (GHC.Types.N:IO[0]
+                                          <Happstack.Server.Internal.Types.Response>_R)
+                                       ipv } } } } } }) -}
+d043d4bc6de4f2ea12addffeb31fc93e
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

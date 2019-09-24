@@ -1,0 +1,42 @@
+53
+Doubles and float both have rounding error issues. Adding
+two numbers will yeild what you expet, plus or minus a
+.00000000001. This is due to how they are implemented, it
+is unforntantly unavoidable. To check is two floats are
+equal one checks if they are suffciatnly close to eachother,
+so that they are practically the same. A real life example
+of this be to see if two functions conververge to the same
+number. Lets say f and g both generate a number through
+Riemann sums, and we want to see if they converge to the
+same number. We can say that they practically the same
+if they are close to each other, say on the fifth term.
+
+Note: to say two fucntions are equal requires rigerous
+mathematics. [1] is a fucntion that generates over
+42 billion correct digits of pi, but is not an identy on pi.
+
+[1]: https://academics.rowan.edu/csm/departments/math/facultystaff/faculty/osler/Billions_pi_digits.pdf
+
+54
+The reason C++ evalues true, is because it carries it over
+from C. In C a conditoin is true if it is non-null or non-
+zero. Java, by contrast uses boolean values for the if 
+expressions, enforcing a rule that the expression must evalute
+to either true or false. The C style has some advantages, it allows
+the programmers to more directly put in a function into the
+if expression. The style is more idomatic, and once the
+the idioms are mastered the code can be fairly concise and clear.
+
+Java, on the other hand, enforces us to have the predicate to
+evalute to true or false. This makes the condition less ambiguous
+and less idomatic. It probably, in general makes the code easier
+to read, and the expense of verbosity. It is also at the slight
+exprense of performance, as the non-zero non-null test is how
+machine code jumps test conditions.
+
+In the end however, unless you are in a situation where you
+should use C, like embedded proceses, the Java syntax's clarity
+is likely to win over. Useing booleans is a better tool for the
+job than just a non-zero non-null condition. It also prevents
+the programming from using the assingment operator (=) when
+they mean to use the equality test operator (==).

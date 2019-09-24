@@ -1,0 +1,532 @@
+Configuring happstack-server-7.5.1.3...
+Preprocessing library for happstack-server-7.5.1.3..
+Building library for happstack-server-7.5.1.3..
+
+[;1mon the commandline: [;1m[35mwarning:[0m[0m[;1m[0m[0m[;1m
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/SimpleHTTP.hs:3:14: [;1m[35mwarning:[0m[0m[;1m[0m[0m[;1m
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m3 |[0m[0m {-# LANGUAGE [;1m[35mOverlappingInstances[0m[0m #-}
+[;1m[34m  |[0m[0m[;1m[35m              ^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 1 of 38] Compiling Happstack.Server.Internal.Clock ( src/Happstack/Server/Internal/Clock.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Clock.o )
+[ 2 of 38] Compiling Happstack.Server.Internal.Cookie ( src/Happstack/Server/Internal/Cookie.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Cookie.o )
+[ 3 of 38] Compiling Happstack.Server.Internal.LazyLiner ( src/Happstack/Server/Internal/LazyLiner.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/LazyLiner.o )
+[ 4 of 38] Compiling Happstack.Server.Internal.LogFormat ( src/Happstack/Server/Internal/LogFormat.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/LogFormat.o )
+[ 5 of 38] Compiling Happstack.Server.Internal.RFC822Headers ( src/Happstack/Server/Internal/RFC822Headers.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/RFC822Headers.o )
+[ 6 of 38] Compiling Happstack.Server.Internal.SocketTH ( src/Happstack/Server/Internal/SocketTH.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/SocketTH.o )
+[ 7 of 38] Compiling Happstack.Server.Internal.Socket ( src/Happstack/Server/Internal/Socket.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Socket.o )
+
+[;1msrc/Happstack/Server/Internal/Socket.hs:39:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-top-binds[0m[0m[;1m][0m[0m[;1m
+    Defined but not used: ‘showHostAddress6’[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m39 |[0m[0m [;1m[35mshowHostAddress6[0m[0m (a,b,c,d) =
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 8 of 38] Compiling Happstack.Server.Internal.TimeoutManager ( src/Happstack/Server/Internal/TimeoutManager.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/TimeoutManager.o )
+[ 9 of 38] Compiling Happstack.Server.Internal.TimeoutIO ( src/Happstack/Server/Internal/TimeoutIO.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/TimeoutIO.o )
+[10 of 38] Compiling Happstack.Server.Internal.TimeoutSocket ( src/Happstack/Server/Internal/TimeoutSocket.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/TimeoutSocket.o )
+
+[;1msrc/Happstack/Server/Internal/TimeoutSocket.hs:91:33: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘sClose’ (imported from Network.Socket):
+    Deprecated: "use 'close'"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m91 |[0m[0m               , toShutdown    = [;1m[35msClose[0m[0m socket
+[;1m[34m   |[0m[0m[;1m[35m                                 ^^^^^^[0m[0m
+[0m[0m[0m[11 of 38] Compiling Happstack.Server.SURI ( src/Happstack/Server/SURI.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/SURI.o )
+[12 of 38] Compiling Happstack.Server.Internal.Types ( src/Happstack/Server/Internal/Types.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Types.o )
+
+[;1msrc/Happstack/Server/Internal/Types.hs:23:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘SomeException’
+    from module ‘Control.Exception’ is redundant[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m23 |[0m[0m [;1m[35mimport Control.Exception (Exception, SomeException)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Types.hs:24:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use "Control.Monad.Except" instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m24 |[0m[0m [;1m[35mimport Control.Monad.Error (Error(strMsg))[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Types.hs:249:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m249 |[0m[0m instance [;1m[35mError[0m[0m Response where
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Types.hs:249:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m249 |[0m[0m instance [;1m[35mError[0m[0m Response where
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^[0m[0m
+[0m[0m[0m[13 of 38] Compiling Happstack.Server.Internal.Multipart ( src/Happstack/Server/Internal/Multipart.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Multipart.o )
+[14 of 38] Compiling Happstack.Server.Internal.MessageWrap ( src/Happstack/Server/Internal/MessageWrap.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/MessageWrap.o )
+[15 of 38] Compiling Happstack.Server.SURI.ParseURI ( src/Happstack/Server/SURI/ParseURI.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/SURI/ParseURI.o )
+[16 of 38] Compiling Happstack.Server.Types ( src/Happstack/Server/Types.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Types.o )
+[17 of 38] Compiling Paths_happstack_server ( .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/autogen/Paths_happstack_server.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Paths_happstack_server.o )
+[18 of 38] Compiling Happstack.Server.Internal.Monads ( src/Happstack/Server/Internal/Monads.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Monads.o )
+
+[;1msrc/Happstack/Server/Internal/Monads.hs:15:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use "Control.Monad.Except" instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m15 |[0m[0m [;1m[35mimport Control.Monad.Error                       ( ErrorT(ErrorT), runErrorT[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:58:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘||’ from module ‘Prelude’ is redundant[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m58 |[0m[0m [;1m[35mimport Prelude                                   (Bool(..), Either(..), Eq(..), Functor(..), IO, Monad(..), Char, Maybe(..), String, Show(..), ($), (.), (>), (++), (&&), (||), (=<<), const, concatMap, flip, id, otherwise, zip)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:392:37: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m392 |[0m[0m newtype WebT m a = WebT { unWebT :: [;1m[35mErrorT[0m[0m Response (FilterT (Response) (MaybeT m)) a }
+[;1m[34m    |[0m[0m[;1m[35m                                     ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:412:31: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m412 |[0m[0m                         (StT ([;1m[35mErrorT[0m[0m Response) a))
+[;1m[34m    |[0m[0m[;1m[35m                               ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:545:25: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m545 |[0m[0m     mplus x y =  WebT $ [;1m[35mErrorT[0m[0m $ FilterT $ (lower x) `mplus` (lower y)
+[;1m[34m    |[0m[0m[;1m[35m                         ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:546:36: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m546 |[0m[0m         where lower = (unFilterT . [;1m[35mrunErrorT[0m[0m . unWebT)
+[;1m[34m    |[0m[0m[;1m[35m                                    ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:551:30: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m551 |[0m[0m     getFilter     m = WebT $ [;1m[35mErrorT[0m[0m $ liftM lft $ getFilter (runErrorT $ unWebT m)
+[;1m[34m    |[0m[0m[;1m[35m                              ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:551:62: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m551 |[0m[0m     getFilter     m = WebT $ ErrorT $ liftM lft $ getFilter ([;1m[35mrunErrorT[0m[0m $ unWebT m)
+[;1m[34m    |[0m[0m[;1m[35m                                                              ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:566:54: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m566 |[0m[0m ununWebT = runMaybeT . Lazy.runWriterT . unFilterT . [;1m[35mrunErrorT[0m[0m . unWebT
+[;1m[34m    |[0m[0m[;1m[35m                                                      ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:570:17: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m570 |[0m[0m mkWebT = WebT . [;1m[35mErrorT[0m[0m . FilterT . Lazy.WriterT . MaybeT
+[;1m[34m    |[0m[0m[;1m[35m                 ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:788:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m788 |[0m[0m instance ([;1m[35mError[0m[0m e, ServerMonad m) => ServerMonad (ErrorT e m) where
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:788:51: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m788 |[0m[0m instance (Error e, ServerMonad m) => ServerMonad ([;1m[35mErrorT[0m[0m e m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                   ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:790:17: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m790 |[0m[0m     localRq f = [;1m[35mmapErrorT[0m[0m $ localRq f
+[;1m[34m    |[0m[0m[;1m[35m                 ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:792:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m792 |[0m[0m instance ([;1m[35mError[0m[0m e, FilterMonad a m) => FilterMonad a (ErrorT e m) where
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:792:55: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m792 |[0m[0m instance (Error e, FilterMonad a m) => FilterMonad a ([;1m[35mErrorT[0m[0m e m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                       ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:795:19: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m795 |[0m[0m     getFilter m = [;1m[35mmapErrorT[0m[0m (\m' ->
+[;1m[34m    |[0m[0m[;1m[35m                   ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:802:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m802 |[0m[0m instance ([;1m[35mError[0m[0m e, WebMonad a m) => WebMonad a (ErrorT e m) where
+[;1m[34m    |[0m[0m[;1m[35m           ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Monads.hs:802:49: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m802 |[0m[0m instance (Error e, WebMonad a m) => WebMonad a ([;1m[35mErrorT[0m[0m e m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                 ^^^^^^[0m[0m
+[0m[0m[0m[19 of 38] Compiling Happstack.Server.Response ( src/Happstack/Server/Response.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Response.o )
+[20 of 38] Compiling Happstack.Server.Validation ( src/Happstack/Server/Validation.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Validation.o )
+[21 of 38] Compiling Happstack.Server.Cookie ( src/Happstack/Server/Cookie.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Cookie.o )
+[22 of 38] Compiling Happstack.Server.RqData ( src/Happstack/Server/RqData.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/RqData.o )
+
+[;1msrc/Happstack/Server/RqData.hs:70:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use "Control.Monad.Except" instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m70 |[0m[0m [;1m[35mimport Control.Monad.Error                      (Error(noMsg, strMsg), ErrorT, mapErrorT)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:73:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The qualified import of ‘Data.ByteString.Char8’ is redundant
+      except perhaps to import instances from ‘Data.ByteString.Char8’
+    To import instances alone, use: import Data.ByteString.Char8()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m73 |[0m[0m [;1m[35mimport qualified Data.ByteString.Char8          as P[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:94:11: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m94 |[0m[0m instance ([;1m[35mError[0m[0m e, Monoid e) => MonadReader r (ReaderError r e) where
+[;1m[34m   |[0m[0m[;1m[35m           ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:98:21: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m98 |[0m[0m instance (Monoid e, [;1m[35mError[0m[0m e) => Applicative (ReaderError r e) where
+[;1m[34m   |[0m[0m[;1m[35m                     ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:103:21: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m103 |[0m[0m instance (Monoid e, [;1m[35mError[0m[0m e) => Alternative (ReaderError r e) where
+[;1m[34m    |[0m[0m[;1m[35m                     ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:125:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m125 |[0m[0m instance [;1m[35mError[0m[0m (Errors String) where
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:125:10: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m125 |[0m[0m instance [;1m[35mError[0m[0m (Errors String) where
+[;1m[34m    |[0m[0m[;1m[35m          ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:206:20: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m206 |[0m[0m instance (Monad m, [;1m[35mError[0m[0m e, HasRqData m) => HasRqData (ErrorT e m) where
+[;1m[34m    |[0m[0m[;1m[35m                    ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:206:56: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m206 |[0m[0m instance (Monad m, Error e, HasRqData m) => HasRqData ([;1m[35mErrorT[0m[0m e m) where
+[;1m[34m    |[0m[0m[;1m[35m                                                        ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:208:21: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘mapErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m208 |[0m[0m     localRqEnv f  = [;1m[35mmapErrorT[0m[0m (localRqEnv f)
+[;1m[34m    |[0m[0m[;1m[35m                     ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:286:36: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m286 |[0m[0m          (Left e)  -> rqDataError ([;1m[35mstrMsg[0m[0m e)
+[;1m[34m    |[0m[0m[;1m[35m                                    ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:295:36: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m295 |[0m[0m          (Left e)  -> rqDataError ([;1m[35mstrMsg[0m[0m e)
+[;1m[34m    |[0m[0m[;1m[35m                                    ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:343:36: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m343 |[0m[0m            Nothing -> rqDataError ([;1m[35mstrMsg[0m[0m $ "Parameter not found: " ++ name)
+[;1m[34m    |[0m[0m[;1m[35m                                    ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:365:39: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m365 |[0m[0m          (Left _fp) -> rqDataError $ ([;1m[35mstrMsg[0m[0m $ "lookBS: " ++ n ++ " is a file.")
+[;1m[34m    |[0m[0m[;1m[35m                                       ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:378:35: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m378 |[0m[0m          (_fp, _) -> rqDataError ([;1m[35mstrMsg[0m[0m $ "lookBSs: " ++ n ++ " is a file.")
+[;1m[34m    |[0m[0m[;1m[35m                                   ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:453:37: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m453 |[0m[0m            Nothing -> rqDataError $ [;1m[35mstrMsg[0m[0m $ "lookCookie: cookie not found: " ++ name
+[;1m[34m    |[0m[0m[;1m[35m                                     ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/RqData.hs:514:38: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘strMsg’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m    |[0m[0m
+[;1m[34m514 |[0m[0m          (Right _) -> rqDataError $ ([;1m[35mstrMsg[0m[0m $ "lookFile: " ++ n ++ " was found but is not a file.")
+[;1m[34m    |[0m[0m[;1m[35m                                      ^^^^^^[0m[0m
+[0m[0m[0m[23 of 38] Compiling Happstack.Server.Monads ( src/Happstack/Server/Monads.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Monads.o )
+
+[;1msrc/Happstack/Server/Monads.hs:44:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use "Control.Monad.Except" instead[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m44 |[0m[0m [;1m[35mimport Control.Monad.Error               (Error, ErrorT)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Monads.hs:74:24: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m74 |[0m[0m instance (Happstack m, [;1m[35mError[0m[0m e)  => Happstack (ErrorT e m)
+[;1m[34m   |[0m[0m[;1m[35m                        ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Monads.hs:74:48: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m74 |[0m[0m instance (Happstack m, Error e)  => Happstack ([;1m[35mErrorT[0m[0m e m)
+[;1m[34m   |[0m[0m[;1m[35m                                                ^^^^^^[0m[0m
+[0m[0m[0m[24 of 38] Compiling Happstack.Server.Routing ( src/Happstack/Server/Routing.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Routing.o )
+[25 of 38] Compiling Happstack.Server.FileServe.BuildingBlocks ( src/Happstack/Server/FileServe/BuildingBlocks.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/FileServe/BuildingBlocks.o )
+[26 of 38] Compiling Happstack.Server.FileServe ( src/Happstack/Server/FileServe.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/FileServe.o )
+[27 of 38] Compiling Happstack.Server.Error ( src/Happstack/Server/Error.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Error.o )
+
+[;1msrc/Happstack/Server/Error.hs:4:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use "Control.Monad.Except" instead[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m4 |[0m[0m [;1m[35mimport Control.Monad.Error              (Error, ErrorT(runErrorT))[0m[0m
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Error.hs:25:26: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m25 |[0m[0m               -> UnWebT ([;1m[35mErrorT[0m[0m e m) a
+[;1m[34m   |[0m[0m[;1m[35m                          ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Error.hs:28:12: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m28 |[0m[0m     err <- [;1m[35mrunErrorT[0m[0m x
+[;1m[34m   |[0m[0m[;1m[35m            ^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Error.hs:51:29: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m51 |[0m[0m errorHandlerSP :: (Monad m, [;1m[35mError[0m[0m e) => (Request -> e -> WebT m a) -> ServerPartT (ErrorT e m) a -> ServerPartT m a
+[;1m[34m   |[0m[0m[;1m[35m                             ^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Error.hs:51:84: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m51 |[0m[0m errorHandlerSP :: (Monad m, Error e) => (Request -> e -> WebT m a) -> ServerPartT ([;1m[35mErrorT[0m[0m e m) a -> ServerPartT m a
+[;1m[34m   |[0m[0m[;1m[35m                                                                                    ^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Error.hs:53:32: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘runErrorT’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m53 |[0m[0m                         eer <- [;1m[35mrunErrorT[0m[0m $ ununWebT $ runServerPartT sps req
+[;1m[34m   |[0m[0m[;1m[35m                                ^^^^^^^^^[0m[0m
+[0m[0m[0m[28 of 38] Compiling Happstack.Server.Auth ( src/Happstack/Server/Auth.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Auth.o )
+[29 of 38] Compiling Happstack.Server.Internal.Handler ( src/Happstack/Server/Internal/Handler.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Handler.o )
+[30 of 38] Compiling Happstack.Server.Internal.Listen ( src/Happstack/Server/Internal/Listen.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Listen.o )
+
+[;1msrc/Happstack/Server/Internal/Listen.hs:13:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network.BSD’ is deprecated:
+      This platform dependent module is no longer supported.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m13 |[0m[0m [;1m[35mimport Network.BSD                              (getProtocolNumber)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:14:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network’ is deprecated:
+      The high level Network interface is no longer supported. Please use Network.Socket.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m14 |[0m[0m [;1m[35mimport Network                                  (Socket)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:15:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘SockAddr’ from module ‘Network.Socket’ is redundant[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m15 |[0m[0m [;1m[35mimport Network.Socket as Socket (SocketOption(KeepAlive), close, setSocketOption,[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:42:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘getProtocolNumber’ (imported from Network.BSD):
+    Deprecated: "This platform dependent module is no longer supported."[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m42 |[0m[0m     proto <- [;1m[35mgetProtocolNumber[0m[0m "tcp"
+[;1m[34m   |[0m[0m[;1m[35m              ^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:48:13: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘bindSocket’ (imported from Network.Socket):
+    Deprecated: "use 'bind'"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m48 |[0m[0m             [;1m[35mbindSocket[0m[0m sock (SockAddrInet (fromIntegral portm) iNADDR_ANY)
+[;1m[34m   |[0m[0m[;1m[35m             ^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:48:64: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘iNADDR_ANY’ (imported from Network.Socket):
+    Deprecated: "Use getAddrInfo instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m48 |[0m[0m             bindSocket sock (SockAddrInet (fromIntegral portm) [;1m[35miNADDR_ANY[0m[0m)
+[;1m[34m   |[0m[0m[;1m[35m                                                                ^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:57:14: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘getProtocolNumber’ (imported from Network.BSD):
+    Deprecated: "This platform dependent module is no longer supported."[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m57 |[0m[0m     proto <- [;1m[35mgetProtocolNumber[0m[0m "tcp"
+[;1m[34m   |[0m[0m[;1m[35m              ^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:58:17: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘inet_addr’ (imported from Network.Socket):
+    Deprecated: "Use "getAddrInfo" instead"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m58 |[0m[0m     hostAddr <- [;1m[35mSocket.inet_addr[0m[0m ip
+[;1m[34m   |[0m[0m[;1m[35m                 ^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Internal/Listen.hs:64:13: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘bindSocket’ (imported from Network.Socket):
+    Deprecated: "use 'bind'"[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m64 |[0m[0m             [;1m[35mbindSocket[0m[0m sock (SockAddrInet (fromIntegral portm) hostAddr)
+[;1m[34m   |[0m[0m[;1m[35m             ^^^^^^^^^^[0m[0m
+[0m[0m[0m[31 of 38] Compiling Happstack.Server.Internal.LowLevel ( src/Happstack/Server/Internal/LowLevel.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/LowLevel.o )
+[32 of 38] Compiling Happstack.Server.Client ( src/Happstack/Server/Client.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Client.o )
+
+[;1msrc/Happstack/Server/Client.hs:9:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network’ is deprecated:
+      The high level Network interface is no longer supported. Please use Network.Socket.[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m9 |[0m[0m [;1m[35mimport Network                              (PortID(PortNumber), connectTo, withSocketsDo)[0m[0m
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Client.hs:18:16: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of data constructor ‘PortNumber’
+    (imported from Network):
+    Deprecated: "The high level Network interface is no longer supported. Please use Network.Socket."[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m18 |[0m[0m       portId = [;1m[35mPortNumber[0m[0m $ toEnum $ portInt
+[;1m[34m   |[0m[0m[;1m[35m                ^^^^^^^^^^[0m[0m
+[0m[0m[0m
+[;1msrc/Happstack/Server/Client.hs:19:8: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    In the use of ‘connectTo’ (imported from Network):
+    Deprecated: "The high level Network interface is no longer supported. Please use Network.Socket."[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m19 |[0m[0m   h <- [;1m[35mconnectTo[0m[0m hostName portId 
+[;1m[34m   |[0m[0m[;1m[35m        ^^^^^^^^^[0m[0m
+[0m[0m[0m[33 of 38] Compiling Happstack.Server.Proxy ( src/Happstack/Server/Proxy.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Proxy.o )
+[34 of 38] Compiling Happstack.Server.SimpleHTTP ( src/Happstack/Server/SimpleHTTP.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/SimpleHTTP.o )
+
+[;1msrc/Happstack/Server/SimpleHTTP.hs:90:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wdeprecations[0m[0m[;1m][0m[0m[;1m
+    Module ‘Network’ is deprecated:
+      The high level Network interface is no longer supported. Please use Network.Socket.[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m90 |[0m[0m [;1m[35mimport Network                                   (Socket)[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[35 of 38] Compiling Happstack.Server.Internal.Compression ( src/Happstack/Server/Internal/Compression.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Internal/Compression.o )
+[36 of 38] Compiling Happstack.Server.I18N ( src/Happstack/Server/I18N.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/I18N.o )
+[37 of 38] Compiling Happstack.Server.Compression ( src/Happstack/Server/Compression.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server/Compression.o )
+[38 of 38] Compiling Happstack.Server ( src/Happstack/Server.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Happstack/Server.o )
+Installing library in /home/luke/proj/hello-website/.stack-work/install/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/happstack-server-7.5.1.3-DIuSqFk6twNLaeWWHBwss0
+Registering library for happstack-server-7.5.1.3..

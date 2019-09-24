@@ -1,0 +1,6 @@
+Configuring zip-archive-0.4...
+Preprocessing library for zip-archive-0.4..
+Building library for zip-archive-0.4..
+[1 of 1] Compiling Codec.Archive.Zip ( src/Codec/Archive/Zip.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Codec/Archive/Zip.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/zip-archive-0.4-9iTOGZjCQx4JoyW5Pw5rKm
+Registering library for zip-archive-0.4..

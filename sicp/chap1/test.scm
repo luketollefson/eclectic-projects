@@ -1,0 +1,23 @@
+(define (square x) (* x x))
+
+(define (even? n)
+  (cond ((= (remainder n 2) 0) #t)
+	(else #f)))
+
+(define (pow base expt)
+  (define (pow-iter a b n)
+    (cond ((= n 0) a)
+	  ((even? n) (pow-iter a (square b) (/ n 2)))
+	  (else (pow-iter (* a b) b (- n 1)))))
+  (pow-iter 1 base expt))
+
+(define (simpsons-rule f a b n)
+  (define (h) (/ (- b a) n))
+  (define (y k) (f (+ a (* k h))))
+  (define (coef k)
+    (cond ((or (= k 0) (= k n)) 1)
+	  ((even? k) 2)
+	  (else 4)))
+  (define (term k)
+    (* (coef k) (y k)))
+  (* (/ h 3) (sum term 0 inc n)))

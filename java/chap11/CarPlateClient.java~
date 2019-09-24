@@ -1,0 +1,28 @@
+
+public class CarPlateClient
+{
+    public static void main(String[] args)
+    {
+    }
+}
+
+class CarPlate
+{
+    private String plateNumber;
+    private String state;
+    private String color;
+
+    public CarPlate(String pn, String s, String c)
+    {
+	plateNumber = pn;
+	state = s;
+	color = c;
+    }
+
+    public String toString()
+    {
+	return "plate number: " + plateNumber
+	    + "; state: " + state
+	    + "; color: " + color;
+    }
+}

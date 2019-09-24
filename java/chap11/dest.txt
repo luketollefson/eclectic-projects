@@ -1,0 +1,37 @@
+      1 /*	A program that takes a file and adds line number
+      2 	Luke
+      3 */
+      4 
+      5 import java.io.FileOutputStream;
+      6 import java.io.IOException;
+      7 import java.io.FileNotFoundException;
+      8 import java.util.Scanner;
+      9 import java.io.File;
+     10 import java.io.PrintWriter;
+     11 
+     12 public class LineNumbers
+     13 {
+     14 	public static void main(String[] args)
+     15 	{
+     16 		try
+     17 		{
+     18 			Scanner source = new Scanner(new File("source.txt"));
+     19 			FileOutputStream dest = new FileOutputStream("dest.txt");
+     20 			PrintWriter pw = new PrintWriter(dest);
+     21 
+     22 			int line = 1;
+     23 			while (source.hasNext())
+     24 			{
+     25 				pw.printf("%7d %s\n", line, source.nextLine());
+     26 				line++;
+     27 			}
+     28 
+     29 			source.close();
+     30 			pw.close();
+     31 		}
+     32 		catch (FileNotFoundException fnfe)
+     33 		{
+     34 			System.out.println(fnfe.getMessage());
+     35 		}
+     36 	}
+     37 }

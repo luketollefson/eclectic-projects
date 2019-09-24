@@ -1,0 +1,11 @@
+Configuring cryptohash-sha256-0.11.101.0...
+Warning: Packages using 'cabal-version: >= 1.10' must specify the
+'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+If a component uses different languages in different modules then list the
+other ones in the 'other-languages' field.
+Preprocessing library for cryptohash-sha256-0.11.101.0..
+Building library for cryptohash-sha256-0.11.101.0..
+[1 of 2] Compiling Crypto.Hash.SHA256.FFI ( src/Crypto/Hash/SHA256/FFI.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Crypto/Hash/SHA256/FFI.o )
+[2 of 2] Compiling Crypto.Hash.SHA256 ( src/Crypto/Hash/SHA256.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Crypto/Hash/SHA256.o )
+Installing library in /home/luke/.stack/snapshots/x86_64-linux/lts-13.0/8.6.3/lib/x86_64-linux-ghc-8.6.3/cryptohash-sha256-0.11.101.0-4hEdGCusAXMBLiu8h413L1
+Registering library for cryptohash-sha256-0.11.101.0..

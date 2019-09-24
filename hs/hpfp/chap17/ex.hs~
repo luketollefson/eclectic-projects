@@ -1,0 +1,6 @@
+
+pure' :: a -> [a]
+pure' x = [x]
+
+(<*>') :: [(a -> b)] -> [a] -> [b]
+(<*>') fs xs = zipWith fmap fs xs
